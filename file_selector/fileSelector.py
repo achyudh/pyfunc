@@ -1,5 +1,6 @@
 from fileRetriever import fileRetriever
 from fileReader import fileReader
+import sys 
 
 class fileSelector():
 
@@ -64,5 +65,9 @@ if __name__ == "__main__":
     retriever = fileRetriever()
     reader = fileReader("(Parameters|Returns).*[^ ]*( : )")
     selector = fileSelector(retriever, reader)
-    root_folder = "../scikit-learn-master/"
+
+
+    if(len(sys.argv) < 2):
+        raise Exception("Usage: python fileSelector.py <path\\to\\root\\directory>") 
+    root_folder = sys.argv[1]
     selector.retrieve_file_names(root_folder, 'test.txt')
