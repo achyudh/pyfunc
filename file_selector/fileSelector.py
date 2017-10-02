@@ -70,4 +70,4 @@ if __name__ == "__main__":
     if(len(sys.argv) < 2):
         raise Exception("Usage: python fileSelector.py <path\\to\\root\\directory>") 
     root_folder = sys.argv[1]
-    selector.retrieve_file_names(root_folder, 'test.txt')
+    selector.retrieve_file_names(root_folder, 'test.txt', False)
