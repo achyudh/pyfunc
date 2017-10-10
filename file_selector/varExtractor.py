@@ -138,7 +138,7 @@ class Extractor():
 
         # Space/tab/newline followed by an alhabetic char or underscore (only eligible
         # name starts, followed by alphanumerics + _, followed by space, colon, space
-        definition_regex = "(\s[A-Za-z_]+[A-Za-z_0-9]* ?\: ?.*)"
+        definition_regex = "(\s\*?[A-Za-z_]+[A-Za-z_0-9]* ?\: ?.*)"
         type_pairs = []
         lines = substring.group(0).replace(self.newline_placeholder, "\n")
         type_lines = [x for x in re.findall(definition_regex, lines)]
