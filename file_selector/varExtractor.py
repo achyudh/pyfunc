@@ -7,15 +7,17 @@ class Extractor():
 
     """
     Evaluates a given file and for a file returns:
-        Array of tuples
-        Each tuple consists of
-            1) String with the whole source method/class where the function is nested
-            2) Array - items correspond to each docstring that can be in file.
-                Each item is a tuple. Each tuple consists of
-                    1) Array of tuples for input types
-                        Each tuple is a pair of var name and var type
-                    2) Array of tuples for output types
-                        Each tuple is a pair of var name and var type
+        Tuple - first entry is:
+            Array of tuples
+            Each tuple consists of
+                1) String with each method's signature
+                2) Array - items correspond to each docstring that can be in file.
+                    Each item is a tuple. Each tuple consists of
+                        1) Array of tuples for input types
+                            Each tuple is a pair of var name and var type
+                        2) Array of tuples for output types
+                            Each tuple is a pair of var name and var type
+            Second entry number of functions in file
 
     """
 
@@ -46,9 +48,14 @@ class Extractor():
             if one_fun_and_docstring[0].startswith("def __init__"):
                 funs_and_docstrings[x] = (one_fun_and_docstring[0], funs_and_docstrings[x - 1][1])
 
-        # Remove functions without docstrings
-        funs_and_docstrings = [(x[0].replace(self.newline_placeholder, "\n"), x[1])
-                               for x in funs_and_docstrings if x[1] != []]
+
+        # Replace the newline placeholder and filter out instances corresponding class definition
+        funs_and_docstrings = [\
+            (self.get_method_signature(x[0].replace(self.newline_placeholder, "\n")), x[1])\
+            for x in funs_and_docstrings if x[0].startswith("def ")\
+        ]
+
+
 
         # For each docstring generate a tuple with 2 arrays as children
         for i in range(len(funs_and_docstrings)):
@@ -59,6 +66,11 @@ class Extractor():
             funs_and_docstrings[i] = (fun, variables)
 
         return funs_and_docstrings
+
+
+
+    def get_method_signature(self, method_string):
+        return re.search("def .*?(\n.*)*\):", method_string, re.MULTILINE).group(0)
 
 
 
@@ -108,8 +120,8 @@ class Extractor():
         :param docstring:
         :return:
         """
-        param_regex = "Parameter.*?((Returns)|$)"
-        return_regex = "Returns.*"
+        param_regex = "Parameters.*?-{1,}.*?(-{3,}|$)"
+        return_regex = "Returns.*?-{1,}.*?(-{3,}|$)"
 
         params = re.search(param_regex, docstring)
         returns = re.search(return_regex, docstring)
@@ -146,8 +158,10 @@ if __name__ == "__main__":
     output_json = {}
 
     for py_file in py_files:
-        output_json[py_file] = extractor.get_declarations(py_file)
+        declarations = extractor.get_declarations(py_file)
+        num_of_fun = len(declarations)
+        output_json[py_file] = (declarations, num_of_fun)
 
     with open("test.json", "w") as write_file:
-        json.dump(output_json, write_file)
+        json.dump(output_json, write_file, indent = 4);
 
