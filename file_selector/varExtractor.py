@@ -1,7 +1,7 @@
 from fileRetriever import fileRetriever
 import re
 import json
-
+import sys
 
 class Extractor():
 
@@ -142,7 +142,12 @@ class Extractor():
 if __name__ == "__main__":
     retriever = fileRetriever()
     extractor = Extractor("(Parameters|Returns).*[^ ]*( : )")
-    py_files = retriever.list_all_files_in_folder("../scikit-learn-master")
+    
+    if(len(sys.argv) < 2):
+        raise Exception("Usage: python varExtractor.py <path\\to\\root\\directory>") 
+    root_folder = sys.argv[1]
+
+    py_files = retriever.list_all_files_in_folder(root_folder)
     output_json = {}
 
     for py_file in py_files:
