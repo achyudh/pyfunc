@@ -18,15 +18,13 @@ class Extractor():
                         2) Array of tuples for output types
                             Each tuple is a pair of var name and var type
             Second entry number of functions in file
-
     """
 
     def __init__(self, regex_string):
         self.regex_string = regex_string
         self.newline_placeholder = "NEWLINE_PLACEHOLDER"
+
     def get_declarations(self, file_name):
-
-
         # Read file
         with open(file_name) as inputFile:
             contents = inputFile.read()
@@ -48,14 +46,11 @@ class Extractor():
             if one_fun_and_docstring[0].startswith("def __init__"):
                 funs_and_docstrings[x] = (one_fun_and_docstring[0], funs_and_docstrings[x - 1][1])
 
-
         # Replace the newline placeholder and filter out instances corresponding class definition
         funs_and_docstrings = [\
             (self.get_method_signature(x[0].replace(self.newline_placeholder, "\n")), x[1])\
             for x in funs_and_docstrings if x[0].startswith("def ")\
         ]
-
-
 
         # For each docstring generate a tuple with 2 arrays as children
         for i in range(len(funs_and_docstrings)):
@@ -67,14 +62,12 @@ class Extractor():
 
         return funs_and_docstrings
 
+    @staticmethod
+    def get_method_signature(method_string):
+        return re.search("def .*?(\n.*?)*?\):", method_string, re.MULTILINE).group(0)
 
-
-    def get_method_signature(self, method_string):
-        return re.search("def .*?(\n.*)*\):", method_string, re.MULTILINE).group(0)
-
-
-
-    def get_docstrings(self, file_contents):
+    @staticmethod
+    def get_docstrings(file_contents):
         """
         Extracts all comments within 3x single or double quotes.
 
@@ -83,7 +76,6 @@ class Extractor():
         :return: array
             List of strings, each item is a docstring (or other comment in triple quotes)
         """
-
 
         double_quotes_regex = '(""".*?""")'
         single_quotes_regex = "('''.*?''')"
@@ -109,7 +101,6 @@ class Extractor():
         if found == None:
             return False
         return True
-
 
     def extract_variable_types_from_docstring(self, docstring):
         """
@@ -146,9 +137,6 @@ class Extractor():
             split = pair.split(":")
             type_pairs.append((split[0].strip(), split[1].strip()))
         return type_pairs
-
-
-
 
 
 if __name__ == "__main__":
