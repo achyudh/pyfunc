@@ -140,7 +140,12 @@ class Extractor:
 if __name__ == "__main__":
     retriever = Retriever()
     extractor = Extractor("(Parameters|Returns).*[^ ]*( : )")
-    py_files = retriever.list_all_files_in_folder("../test")
+    
+    if(len(sys.argv) < 2):
+        raise Exception("Usage: python varExtractor.py <path\\to\\root\\directory>") 
+    root_folder = sys.argv[1]
+
+    py_files = retriever.list_all_files_in_folder(root_folder)
     output_json = {}
 
     for py_file in py_files:
@@ -149,5 +154,4 @@ if __name__ == "__main__":
         output_json[py_file] = (declarations, num_of_fun)
 
     with open("test.json", "w") as write_file:
-        json.dump(output_json, write_file, indent = 4)
-
+        json.dump(output_json, write_file, indent = 4);
