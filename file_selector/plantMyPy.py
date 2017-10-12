@@ -2,10 +2,11 @@
 import sys
 from fileRetriever import Retriever
 from varExtractor import Extractor
-def plantComment(struct):
-	comments = []
+def makeComment(struct):
+	comments = {}
 	for path,files in struct.items():
 		print(path)
+		comments[path] = []
 		for funcs in files:
 			#print ("method name: " + funcs['name'])
 			mypy_str = "# type: ( "
@@ -27,7 +28,7 @@ def plantComment(struct):
 
 			print (funcs['name'])
 			print( mypy_str)
-			comments.append({'path': path, 'method' : funcs['name'], 'line' : funcs['line'], 'comment': mypy_str})
+			comments[path].append({'method' : funcs['name'], 'line' : funcs['line'], 'comment': mypy_str})
 			print ("***")
 	print(comments)
 	return comments
@@ -48,6 +49,25 @@ def get_mypy_type(string):
 	else:
 		return 'None'
 
+def plantComments(comments):
+	for item, value in comments.items():
+		f = open(item, 'r')
+		contents = f.readlines()
+		f.close()
+		for comment in value:
+		#contents.insert(item['line']-1, item['comment'])
+			line = contents[comment['line']-1][:-2]
+			line = line + " " + comment['comment'] + "\n"
+			contents[comment['line']-1] = line
+
+		f2 = open(item+'_', 'w')
+		contents = "".join(contents)
+		f2.write(contents)
+		f2.close()
+		#print (contents)
+		#print ("_____")
+
+
 if __name__ == "__main__":
     retriever = Retriever()
     if(len(sys.argv) < 2):
@@ -61,5 +81,7 @@ if __name__ == "__main__":
         declarations = Extractor.get_declarations(py_file)
         output_json[py_file] = declarations
     #print (output_json)
-    comments = plantComment(output_json)
+    comments = makeComment(output_json)
+    plantComments(comments)
+
 	
