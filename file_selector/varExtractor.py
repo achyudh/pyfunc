@@ -1,17 +1,53 @@
-
 import json, ast, re, sys
-from varExtractorRegEx import Extractor
 from fileRetriever import Retriever
+
+
+def extract_variable_types_from_docstring(docstring):
+    """
+    Takes in a docstring String and returns a tuple of two lists.
+    First list contains tuples of input variable name and types.
+    Second list contains tuples of return names and variable types.
+
+    :param docstring:
+    :return:
+    """
+    param_regex = "Parameters.*?-{1,}.*?(-{3,}|$)"
+    return_regex = "Returns.*?-{1,}.*?(-{3,}|$)"
+
+    params = re.search(param_regex, docstring)
+    returns = re.search(return_regex, docstring)
+
+    param_pairs, returns_pairs = None, None
+    if params is not None:
+        param_pairs = extract_variables_types_from_substring(params)
+    if returns is not None:
+        returns_pairs = extract_variables_types_from_substring(returns)
+    return param_pairs, returns_pairs
+
+
+def extract_variables_types_from_substring(substring):
+    # Space/tab/newline followed by an alhabetic char or underscore (only eligible
+    # name starts, followed by alphanumerics + _, followed by space, colon, space
+    definition_regex = "(\s\*?[A-Za-z_]+[A-Za-z_0-9]* ?\: ?.*)"
+    type_pairs = dict()
+    lines = substring.group(0).replace("NEWLINE_PLACEHOLDER", "\n")
+    type_lines = [x for x in re.findall(definition_regex, lines)]
+    for pair in type_lines:
+        split = pair.split(":")
+        type_pairs[split[0].strip()] = split[1].strip()
+    return type_pairs
+
 
 if __name__ == "__main__":
     retriever = Retriever()
-    extractor = Extractor(None)
-    if(len(sys.argv) < 2):
-        raise Exception("Usage: python varExtractor.py <path\\to\\root\\directory>") 
-    root_folder = sys.argv[1]
-    # py_files = retriever.list_all_files_in_folder("../scikit-learn-master/sklearn")
-    py_files = retriever.list_all_files_in_folder(root_folder)
+    # if(len(sys.argv) < 2):
+    #     raise Exception("Usage: python varExtractor.py <path\\to\\root\\directory>")
+    # root_folder = sys.argv[1]
+    # py_files = retriever.list_all_files_in_folder(root_folder)
+    py_files = retriever.list_all_files_in_folder("../scikit-learn-master/sklearn")
     output_json = {}
+    global_missed_arg_ctr = 0
+    global_arg_counter = 0
 
     for py_file in py_files:
         with open(py_file) as fd:
@@ -24,26 +60,24 @@ if __name__ == "__main__":
         for node in func_def_nodes:
             if ast.get_docstring(node) is not None:
                 docstr_replaced = ast.get_docstring(node).replace("\n", "NEWLINE_PLACEHOLDER")
-                param_pairs, return_pairs = extractor.extract_variable_types_from_docstring(docstr_replaced)
+                param_types, return_types = extract_variable_types_from_docstring(docstr_replaced)
 
-                # Hash the type information for faster searching
-                # TODO: Modify at source varExtractorRegEx, change list to dict
-                param_types = dict()
-                if param_pairs is not None:
-                    for pair in param_pairs:
-                        param_types[pair[0]] = pair[1]
-
-                invalid_arg_ctr = 0
+                missed_arg_ctr = 0
+                total_arg_ctr = 0
                 param_types_out = list()
                 for argument in node.args.args:
-                    if argument.id in param_types:
-                        param_types_out.append((argument.id, param_types[argument.id]))
+                    if param_types is not None and argument.arg in param_types:
+                        param_types_out.append((argument.arg, param_types[argument.arg]))
                     else:
-                        invalid_arg_ctr += 1
+                        missed_arg_ctr += 1
+                    total_arg_ctr += 1
 
-                declarations.append((node.name, ((param_types_out, invalid_arg_ctr), return_pairs)))
+                declarations.append((node.name, ((param_types_out, total_arg_ctr, missed_arg_ctr), return_types)))
+                global_missed_arg_ctr += missed_arg_ctr
+                global_arg_counter += total_arg_ctr
 
         output_json[py_file] = (declarations, num_of_func)
 
-    with open("scikit.json", "w") as write_file:
-        json.dump(output_json, write_file, indent = 4)
+    with open("test.json", "w") as write_file:
+        json.dump(output_json, write_file, indent=4)
+    print("Total args: %d, Missed args: %d, Proportion missed:%f" % (global_arg_counter, global_missed_arg_ctr, global_missed_arg_ctr/global_arg_counter))
