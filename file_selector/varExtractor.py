@@ -1,13 +1,16 @@
 
-import json, ast, re
+import json, ast, re, sys
 from varExtractorRegEx import Extractor
 from fileRetriever import Retriever
 
 if __name__ == "__main__":
     retriever = Retriever()
     extractor = Extractor(None)
+    if(len(sys.argv) < 2):
+        raise Exception("Usage: python varExtractor.py <path\\to\\root\\directory>") 
+    root_folder = sys.argv[1]
     # py_files = retriever.list_all_files_in_folder("../scikit-learn-master/sklearn")
-    py_files = retriever.list_all_files_in_folder("../scikit-learn-master")
+    py_files = retriever.list_all_files_in_folder(root_folder)
     output_json = {}
 
     for py_file in py_files:
