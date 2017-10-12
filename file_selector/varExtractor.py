@@ -58,27 +58,27 @@ class Extractor:
                 param_types_out = dict()
                 for argument in node.args.args:
                     if param_types is not None and argument.arg in param_types:
-                        param_types_out[argument.arg] = param_types[argument.arg]
+                        param_types_out[argument.arg] = {"type": param_types[argument.arg], "line": argument.lineno}
                     else:
                         missed_arg_ctr += 1
                     total_arg_ctr += 1
 
-                declarations.append((node.name, ((param_types_out, total_arg_ctr, missed_arg_ctr), dict() if return_types is None else return_types)))
+                declarations.append({"name": node.name, "line": node.lineno, "params": param_types_out, "returns": dict() if return_types is None else return_types, "count": {"total_params": total_arg_ctr, "missed_params": missed_arg_ctr}})
         return declarations
 
 
 if __name__ == "__main__":
     retriever = Retriever()
-    if len(sys.argv) < 2:
-        raise Exception("Usage: python varExtractor.py <path\\to\\root\\directory>")
-    root_folder = sys.argv[1]
-    py_files = retriever.list_all_files_in_folder(root_folder)
-    # py_files = retriever.list_all_files_in_folder("../scikit-learn-master/sklearn")
+    # if len(sys.argv) < 2:
+    #     raise Exception("Usage: python varExtractor.py <path\\to\\root\\directory>")
+    # root_folder = sys.argv[1]
+    # py_files = retriever.list_all_files_in_folder(root_folder)
+    py_files = retriever.list_all_files_in_folder("../scikit-learn-master/sklearn")
     output_json = {}
 
     for py_file in py_files:
         declarations = Extractor.get_declarations(py_file)
         output_json[py_file] = declarations
 
-    with open("test.json", "w") as write_file:
+    with open("scikit.json", "w") as write_file:
         json.dump(output_json, write_file, indent=4)
