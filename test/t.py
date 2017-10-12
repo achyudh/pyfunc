@@ -13,7 +13,7 @@ def blah(p=(None,None)):
    print(p)
 
 
-def blah2(c=None, d=str): 
+def blah2(c=None, d='str'): 
    """ silly method 2
     
 
