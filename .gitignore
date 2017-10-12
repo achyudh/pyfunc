@@ -2,3 +2,5 @@
 \.idea/
 
 *.pyc
+
+file_selector/\.DS_Store
