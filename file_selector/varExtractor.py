@@ -1,6 +1,7 @@
 import json, ast, re, sys
 from fileRetriever import Retriever
 
+
 class Extractor:
 
     @staticmethod
@@ -63,7 +64,8 @@ class Extractor:
                     total_arg_ctr += 1
 
                 declarations.append((node.name, ((param_types_out, total_arg_ctr, missed_arg_ctr), dict() if return_types is None else return_types)))
-                return declarations
+        return declarations
+
 
 if __name__ == "__main__":
     retriever = Retriever()
