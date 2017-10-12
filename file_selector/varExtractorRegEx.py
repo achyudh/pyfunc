@@ -1,7 +1,7 @@
 from fileRetriever import Retriever
 import re
 import json
-
+import sys
 
 class Extractor:
 
@@ -142,7 +142,7 @@ if __name__ == "__main__":
     extractor = Extractor("(Parameters|Returns).*[^ ]*( : )")
     
     if(len(sys.argv) < 2):
-        raise Exception("Usage: python varExtractor.py <path\\to\\root\\directory>") 
+        raise Exception("Usage: python varExtractorRegEx.py <path\\to\\root\\directory>") 
     root_folder = sys.argv[1]
 
     py_files = retriever.list_all_files_in_folder(root_folder)
