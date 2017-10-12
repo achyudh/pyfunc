@@ -1,4 +1,5 @@
-def fetch_rcv1(data_home=None, subset=None, download_if_missing=True):
+def fetch_rcv1(data_home=None, subset=None, 
+    download_if_missing=True):
     """Load the RCV1 multilabel dataset, downloading it if necessary.
 
     Version: RCV1-v2, vectors, full sets, topics multilabels.
