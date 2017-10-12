@@ -1,6 +1,7 @@
 import os
 
-class fileRetriever():
+
+class Retriever():
     """
     Class for retrieving all python files inside the folder.
     Those are then processed by fileReader to retrieve files
@@ -29,6 +30,6 @@ class fileRetriever():
         return file_names
 
 if __name__ == "__main__":
-    it = fileRetriever()
+    it = Retriever()
     root_folder_name = "/Users/nknyazev/Documents/Delft/Software_Analytics/project/scikit-learn-master/"
     file_names = it.list_all_files_in_folder(root_folder_name)

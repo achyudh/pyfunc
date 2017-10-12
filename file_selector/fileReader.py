@@ -1,6 +1,6 @@
 import re
 
-class fileReader():
+class Reader():
 
     """
     Class for reading a file and extracting all docstrings that

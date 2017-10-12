@@ -1,8 +1,9 @@
-from fileRetriever import fileRetriever
-from fileReader import fileReader
+from fileRetriever import Retriever
+from fileReader import Reader
 import sys 
 
-class fileSelector():
+
+class Selector():
 
     """
     Main class that with help of fileRetriever and fileReader
@@ -59,12 +60,10 @@ class fileSelector():
                     output_file.write("=" * 20 + "\n")
 
 
-
-
 if __name__ == "__main__":
-    retriever = fileRetriever()
-    reader = fileReader("(Parameters|Returns).*[^ ]*( : )")
-    selector = fileSelector(retriever, reader)
+    retriever = Retriever()
+    reader = Reader("(Parameters|Returns).*[^ ]*( : )")
+    selector = Selector(retriever, reader)
 
 
     if(len(sys.argv) < 2):
