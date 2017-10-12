@@ -1,6 +1,3 @@
-import json, ast, re
-from fileRetriever import Retriever
-from varExtractorRegEx import Extractor
 
 
 if __name__ == "__main__":
