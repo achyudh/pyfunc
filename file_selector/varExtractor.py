@@ -64,15 +64,15 @@ if __name__ == "__main__":
 
                 missed_arg_ctr = 0
                 total_arg_ctr = 0
-                param_types_out = list()
+                param_types_out = dict()
                 for argument in node.args.args:
                     if param_types is not None and argument.arg in param_types:
-                        param_types_out.append((argument.arg, param_types[argument.arg]))
+                        param_types_out[argument.arg] = param_types[argument.arg]
                     else:
                         missed_arg_ctr += 1
                     total_arg_ctr += 1
 
-                declarations.append((node.name, ((param_types_out, total_arg_ctr, missed_arg_ctr), return_types)))
+                declarations.append((node.name, ((param_types_out, total_arg_ctr, missed_arg_ctr), dict() if return_types is None else return_types)))
                 global_missed_arg_ctr += missed_arg_ctr
                 global_arg_counter += total_arg_ctr
 
