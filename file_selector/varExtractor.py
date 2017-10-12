@@ -22,13 +22,13 @@ class Extractor:
 
         param_pairs, returns_pairs = None, None
         if params is not None:
-            param_pairs = Extractor.extract_variables_types_from_substring(params)
+            param_pairs = Extractor.extract_param_types_from_substring(params)
         if returns is not None:
-            returns_pairs = Extractor.extract_variables_types_from_substring(returns)
+            returns_pairs = Extractor.extract_return_types_from_substring(returns)
         return param_pairs, returns_pairs
 
     @staticmethod
-    def extract_variables_types_from_substring(substring):
+    def extract_param_types_from_substring(substring):
         # Space/tab/newline followed by an alhabetic char or underscore (only eligible
         # name starts, followed by alphanumerics + _, followed by space, colon, space
         definition_regex = "(\s\*?[A-Za-z_]+[A-Za-z_0-9]* ?\: ?.*)"
@@ -38,6 +38,19 @@ class Extractor:
         for pair in type_lines:
             split = pair.split(":")
             type_pairs[split[0].strip()] = split[1].strip()
+        return type_pairs
+
+    @staticmethod
+    def extract_return_types_from_substring(substring):
+        # Space/tab/newline followed by an alhabetic char or underscore (only eligible
+        # name starts, followed by alphanumerics + _, followed by space, colon, space
+        definition_regex = "(\s\*?[A-Za-z_]+[A-Za-z_0-9]* ?\: ?.*)"
+        type_pairs = list()
+        lines = substring.group(0).replace("NEWLINE_PLACEHOLDER", "\n")
+        type_lines = [x for x in re.findall(definition_regex, lines)]
+        for pair in type_lines:
+            split = pair.split(":")
+            type_pairs.append((split[0].strip(), split[1].strip()))
         return type_pairs
 
     @staticmethod
@@ -55,15 +68,17 @@ class Extractor:
 
                 missed_arg_ctr = 0
                 total_arg_ctr = 0
-                param_types_out = dict()
+                param_types_out = list()
                 for argument in node.args.args:
                     if param_types is not None and argument.arg in param_types:
-                        param_types_out[argument.arg] = {"type": param_types[argument.arg], "line": argument.lineno}
+                        param_types_out.append((argument.arg, param_types[argument.arg]))
                     else:
                         missed_arg_ctr += 1
                     total_arg_ctr += 1
 
-                declarations.append({"name": node.name, "line": node.lineno, "params": param_types_out, "returns": dict() if return_types is None else return_types, "count": {"total_params": total_arg_ctr, "missed_params": missed_arg_ctr}})
+                declarations.append({"name": node.name, "line": node.lineno, "params": param_types_out,
+                                     "returns": list() if return_types is None else return_types,
+                                     "count": {"total_params": total_arg_ctr, "missed_params": missed_arg_ctr}})
         return declarations
 
 
