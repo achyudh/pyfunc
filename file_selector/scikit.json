@@ -204,7 +204,7 @@
         },
         {
             "name": "cross_val_predict",
-            "line": 1294,
+            "line": 1295,
             "params": [
                 [
                     "estimator",
@@ -324,7 +324,7 @@
         },
         {
             "name": "cross_val_score",
-            "line": 1478,
+            "line": 1479,
             "params": [
                 [
                     "estimator",
@@ -376,7 +376,7 @@
         },
         {
             "name": "_fit_and_score",
-            "line": 1585,
+            "line": 1587,
             "params": [
                 [
                     "estimator",
@@ -528,7 +528,7 @@
         },
         {
             "name": "permutation_test_score",
-            "line": 1847,
+            "line": 1849,
             "params": [
                 [
                     "estimator",
@@ -701,7 +701,7 @@
     "../scikit-learn-master/sklearn\\grid_search.py": [
         {
             "name": "fit_grid_point",
-            "line": 275,
+            "line": 276,
             "params": [
                 [
                     "X",
@@ -787,7 +787,7 @@
         },
         {
             "name": "isotonic_regression",
-            "line": 78,
+            "line": 79,
             "params": [
                 [
                     "y",
@@ -827,7 +827,7 @@
     "../scikit-learn-master/sklearn\\learning_curve.py": [
         {
             "name": "learning_curve",
-            "line": 28,
+            "line": 31,
             "params": [
                 [
                     "estimator",
@@ -919,7 +919,7 @@
         },
         {
             "name": "_incremental_fit_estimator",
-            "line": 240,
+            "line": 241,
             "params": [],
             "returns": [],
             "count": {
@@ -929,7 +929,7 @@
         },
         {
             "name": "validation_curve",
-            "line": 261,
+            "line": 262,
             "params": [
                 [
                     "estimator",
@@ -1169,7 +1169,7 @@
         },
         {
             "name": "sparse_random_matrix",
-            "line": 198,
+            "line": 199,
             "params": [
                 [
                     "n_components",
@@ -1238,7 +1238,7 @@
         },
         {
             "name": "config_context",
-            "line": 56,
+            "line": 57,
             "params": [],
             "returns": [],
             "count": {
@@ -1260,7 +1260,7 @@
     "../scikit-learn-master/sklearn\\cluster\\affinity_propagation_.py": [
         {
             "name": "affinity_propagation",
-            "line": 33,
+            "line": 35,
             "params": [
                 [
                     "S",
@@ -1372,7 +1372,7 @@
     "../scikit-learn-master/sklearn\\cluster\\dbscan_.py": [
         {
             "name": "dbscan",
-            "line": 22,
+            "line": 23,
             "params": [
                 [
                     "X",
@@ -1508,7 +1508,7 @@
         },
         {
             "name": "linkage_tree",
-            "line": 292,
+            "line": 294,
             "params": [
                 [
                     "X",
@@ -1649,7 +1649,7 @@
         },
         {
             "name": "k_means",
-            "line": 167,
+            "line": 170,
             "params": [
                 [
                     "X",
@@ -1729,7 +1729,7 @@
         },
         {
             "name": "_kmeans_single_lloyd",
-            "line": 405,
+            "line": 408,
             "params": [
                 [
                     "X",
@@ -1829,7 +1829,7 @@
         },
         {
             "name": "_labels_inertia",
-            "line": 573,
+            "line": 574,
             "params": [
                 [
                     "X",
@@ -1869,7 +1869,7 @@
         },
         {
             "name": "_init_centroids",
-            "line": 626,
+            "line": 627,
             "params": [
                 [
                     "X",
@@ -1909,7 +1909,7 @@
         },
         {
             "name": "_mini_batch_step",
-            "line": 1014,
+            "line": 1018,
             "params": [
                 [
                     "X",
@@ -1973,7 +1973,7 @@
         },
         {
             "name": "_mini_batch_convergence",
-            "line": 1150,
+            "line": 1152,
             "params": [],
             "returns": [],
             "count": {
@@ -1985,7 +1985,7 @@
     "../scikit-learn-master/sklearn\\cluster\\mean_shift_.py": [
         {
             "name": "estimate_bandwidth",
-            "line": 31,
+            "line": 32,
             "params": [
                 [
                     "X",
@@ -2021,7 +2021,7 @@
         },
         {
             "name": "mean_shift",
-            "line": 105,
+            "line": 107,
             "params": [
                 [
                     "X",
@@ -2104,7 +2104,7 @@
     "../scikit-learn-master/sklearn\\cluster\\spectral.py": [
         {
             "name": "discretize",
-            "line": 21,
+            "line": 22,
             "params": [
                 [
                     "vectors",
@@ -2140,7 +2140,7 @@
         },
         {
             "name": "spectral_clustering",
-            "line": 160,
+            "line": 162,
             "params": [
                 [
                     "affinity",
@@ -2336,7 +2336,7 @@
         },
         {
             "name": "graph_lasso",
-            "line": 81,
+            "line": 84,
             "params": [
                 [
                     "emp_cov",
@@ -2408,7 +2408,7 @@
         },
         {
             "name": "graph_lasso_path",
-            "line": 362,
+            "line": 363,
             "params": [
                 [
                     "X",
@@ -2467,7 +2467,7 @@
     "../scikit-learn-master/sklearn\\covariance\\robust_covariance.py": [
         {
             "name": "c_step",
-            "line": 28,
+            "line": 30,
             "params": [
                 [
                     "X",
@@ -2519,7 +2519,7 @@
         },
         {
             "name": "select_candidates",
-            "line": 178,
+            "line": 181,
             "params": [
                 [
                     "X",
@@ -2575,7 +2575,7 @@
         },
         {
             "name": "fast_mcd",
-            "line": 302,
+            "line": 304,
             "params": [
                 [
                     "X",
@@ -2737,7 +2737,7 @@
     "../scikit-learn-master/sklearn\\cross_decomposition\\pls_.py": [
         {
             "name": "_nipals_twoblocks_inner_loop",
-            "line": 24,
+            "line": 25,
             "params": [],
             "returns": [],
             "count": {
@@ -2792,7 +2792,7 @@
         },
         {
             "name": "load_files",
-            "line": 72,
+            "line": 74,
             "params": [
                 [
                     "container_path",
@@ -3203,7 +3203,7 @@
     "../scikit-learn-master/sklearn\\datasets\\covtype.py": [
         {
             "name": "fetch_covtype",
-            "line": 44,
+            "line": 45,
             "params": [
                 [
                     "data_home",
@@ -3237,7 +3237,7 @@
     "../scikit-learn-master/sklearn\\datasets\\kddcup99.py": [
         {
             "name": "fetch_kddcup99",
-            "line": 48,
+            "line": 50,
             "params": [
                 [
                     "subset",
@@ -3281,7 +3281,7 @@
         },
         {
             "name": "_fetch_brute_kddcup99",
-            "line": 236,
+            "line": 238,
             "params": [
                 [
                     "data_home",
@@ -3355,7 +3355,7 @@
         },
         {
             "name": "_fetch_lfw_people",
-            "line": 208,
+            "line": 209,
             "params": [],
             "returns": [],
             "count": {
@@ -3365,7 +3365,7 @@
         },
         {
             "name": "fetch_lfw_people",
-            "line": 249,
+            "line": 252,
             "params": [
                 [
                     "data_home",
@@ -3409,7 +3409,7 @@
         },
         {
             "name": "_fetch_lfw_pairs",
-            "line": 348,
+            "line": 349,
             "params": [],
             "returns": [],
             "count": {
@@ -3419,7 +3419,7 @@
         },
         {
             "name": "fetch_lfw_pairs",
-            "line": 399,
+            "line": 401,
             "params": [
                 [
                     "subset",
@@ -3481,7 +3481,7 @@
     "../scikit-learn-master/sklearn\\datasets\\mlcomp.py": [
         {
             "name": "load_mlcomp",
-            "line": 23,
+            "line": 26,
             "params": [
                 [
                     "name_or_id",
@@ -3543,7 +3543,7 @@
         },
         {
             "name": "fetch_mldata",
-            "line": 49,
+            "line": 50,
             "params": [
                 [
                     "dataname",
@@ -3585,7 +3585,7 @@
     "../scikit-learn-master/sklearn\\datasets\\olivetti_faces.py": [
         {
             "name": "fetch_olivetti_faces",
-            "line": 51,
+            "line": 52,
             "params": [
                 [
                     "data_home",
@@ -3635,7 +3635,7 @@
     "../scikit-learn-master/sklearn\\datasets\\rcv1.py": [
         {
             "name": "fetch_rcv1",
-            "line": 72,
+            "line": 73,
             "params": [
                 [
                     "data_home",
@@ -3703,7 +3703,7 @@
         },
         {
             "name": "make_classification",
-            "line": 37,
+            "line": 41,
             "params": [
                 [
                     "n_samples",
@@ -3783,7 +3783,7 @@
         },
         {
             "name": "make_multilabel_classification",
-            "line": 249,
+            "line": 253,
             "params": [
                 [
                     "n_samples",
@@ -3879,7 +3879,7 @@
         },
         {
             "name": "make_regression",
-            "line": 449,
+            "line": 452,
             "params": [
                 [
                     "n_samples",
@@ -3947,7 +3947,7 @@
         },
         {
             "name": "make_circles",
-            "line": 572,
+            "line": 573,
             "params": [
                 [
                     "n_samples",
@@ -4023,7 +4023,7 @@
         },
         {
             "name": "make_blobs",
-            "line": 691,
+            "line": 692,
             "params": [
                 [
                     "n_samples",
@@ -4171,7 +4171,7 @@
         },
         {
             "name": "make_low_rank_matrix",
-            "line": 979,
+            "line": 980,
             "params": [
                 [
                     "n_samples",
@@ -4207,7 +4207,7 @@
         },
         {
             "name": "make_sparse_coded_signal",
-            "line": 1049,
+            "line": 1050,
             "params": [
                 [
                     "n_samples",
@@ -4299,7 +4299,7 @@
         },
         {
             "name": "make_sparse_spd_matrix",
-            "line": 1198,
+            "line": 1200,
             "params": [
                 [
                     "dim",
@@ -4403,7 +4403,7 @@
         },
         {
             "name": "make_gaussian_quantiles",
-            "line": 1369,
+            "line": 1371,
             "params": [
                 [
                     "mean",
@@ -4451,7 +4451,7 @@
         },
         {
             "name": "make_biclusters",
-            "line": 1465,
+            "line": 1466,
             "params": [
                 [
                     "shape",
@@ -4503,7 +4503,7 @@
         },
         {
             "name": "make_checkerboard",
-            "line": 1557,
+            "line": 1558,
             "params": [
                 [
                     "shape",
@@ -4603,7 +4603,7 @@
         },
         {
             "name": "fetch_species_distributions",
-            "line": 148,
+            "line": 149,
             "params": [
                 [
                     "data_home",
@@ -4657,7 +4657,7 @@
     "../scikit-learn-master/sklearn\\datasets\\svmlight_format.py": [
         {
             "name": "load_svmlight_file",
-            "line": 33,
+            "line": 35,
             "params": [
                 [
                     "f",
@@ -4713,7 +4713,7 @@
         },
         {
             "name": "load_svmlight_files",
-            "line": 192,
+            "line": 194,
             "params": [
                 [
                     "files",
@@ -4756,7 +4756,7 @@
         },
         {
             "name": "dump_svmlight_file",
-            "line": 376,
+            "line": 377,
             "params": [
                 [
                     "X",
@@ -4837,7 +4837,7 @@
         },
         {
             "name": "fetch_20newsgroups",
-            "line": 144,
+            "line": 147,
             "params": [
                 [
                     "data_home",
@@ -4876,7 +4876,7 @@
         },
         {
             "name": "fetch_20newsgroups_vectorized",
-            "line": 277,
+            "line": 278,
             "params": [
                 [
                     "subset",
@@ -4987,7 +4987,7 @@
     "../scikit-learn-master/sklearn\\decomposition\\dict_learning.py": [
         {
             "name": "_sparse_encode",
-            "line": 27,
+            "line": 29,
             "params": [
                 [
                     "X",
@@ -5047,7 +5047,7 @@
         },
         {
             "name": "sparse_encode",
-            "line": 171,
+            "line": 173,
             "params": [
                 [
                     "X",
@@ -5115,7 +5115,7 @@
         },
         {
             "name": "_update_dict",
-            "line": 312,
+            "line": 313,
             "params": [
                 [
                     "dictionary",
@@ -5155,7 +5155,7 @@
         },
         {
             "name": "dict_learning",
-            "line": 387,
+            "line": 390,
             "params": [
                 [
                     "X",
@@ -5235,7 +5235,7 @@
         },
         {
             "name": "dict_learning_online",
-            "line": 561,
+            "line": 566,
             "params": [
                 [
                     "X",
@@ -5383,7 +5383,7 @@
         },
         {
             "name": "fastica",
-            "line": 149,
+            "line": 152,
             "params": [
                 [
                     "X",
@@ -5561,7 +5561,7 @@
         },
         {
             "name": "_initialize_nmf",
-            "line": 233,
+            "line": 234,
             "params": [
                 [
                     "X",
@@ -5601,7 +5601,7 @@
         },
         {
             "name": "_update_coordinate_descent",
-            "line": 371,
+            "line": 372,
             "params": [],
             "returns": [],
             "count": {
@@ -5611,7 +5611,7 @@
         },
         {
             "name": "_fit_coordinate_descent",
-            "line": 402,
+            "line": 404,
             "params": [
                 [
                     "X",
@@ -5687,7 +5687,7 @@
         },
         {
             "name": "_multiplicative_update_w",
-            "line": 508,
+            "line": 509,
             "params": [],
             "returns": [],
             "count": {
@@ -5707,7 +5707,7 @@
         },
         {
             "name": "_fit_multiplicative_update",
-            "line": 685,
+            "line": 688,
             "params": [
                 [
                     "X",
@@ -5779,7 +5779,7 @@
         },
         {
             "name": "non_negative_factorization",
-            "line": 819,
+            "line": 824,
             "params": [
                 [
                     "X",
@@ -5869,7 +5869,7 @@
     "../scikit-learn-master/sklearn\\decomposition\\online_lda.py": [
         {
             "name": "_update_doc_distribution",
-            "line": 34,
+            "line": 36,
             "params": [
                 [
                     "X",
@@ -6031,7 +6031,7 @@
         },
         {
             "name": "_generate_bagging_indices",
-            "line": 48,
+            "line": 50,
             "params": [],
             "returns": [],
             "count": {
@@ -6041,7 +6041,7 @@
         },
         {
             "name": "_parallel_build_estimators",
-            "line": 64,
+            "line": 65,
             "params": [],
             "returns": [],
             "count": {
@@ -6144,7 +6144,7 @@
         },
         {
             "name": "_parallel_build_trees",
-            "line": 96,
+            "line": 97,
             "params": [],
             "returns": [],
             "count": {
@@ -6211,7 +6211,7 @@
         },
         {
             "name": "partial_dependence",
-            "line": 72,
+            "line": 73,
             "params": [
                 [
                     "gbrt",
@@ -6255,7 +6255,7 @@
         },
         {
             "name": "plot_partial_dependence",
-            "line": 166,
+            "line": 170,
             "params": [
                 [
                     "gbrt",
@@ -7000,7 +7000,7 @@
         },
         {
             "name": "_load_output",
-            "line": 104,
+            "line": 105,
             "params": [],
             "returns": [],
             "count": {
@@ -7212,7 +7212,7 @@
         },
         {
             "name": "_read_fileobject",
-            "line": 149,
+            "line": 150,
             "params": [
                 [
                     "fileobj",
@@ -7280,7 +7280,7 @@
         },
         {
             "name": "parallel_backend",
-            "line": 67,
+            "line": 68,
             "params": [],
             "returns": [],
             "count": {
@@ -7362,7 +7362,7 @@
         },
         {
             "name": "_strided_from_memmap",
-            "line": 101,
+            "line": 102,
             "params": [],
             "returns": [],
             "count": {
@@ -7464,7 +7464,7 @@
         },
         {
             "name": "_to_graph",
-            "line": 87,
+            "line": 88,
             "params": [],
             "returns": [],
             "count": {
@@ -7501,7 +7501,7 @@
         },
         {
             "name": "grid_to_graph",
-            "line": 166,
+            "line": 167,
             "params": [
                 [
                     "n_x",
@@ -7821,7 +7821,7 @@
         },
         {
             "name": "_estimate_mi",
-            "line": 196,
+            "line": 197,
             "params": [
                 [
                     "X",
@@ -7865,7 +7865,7 @@
         },
         {
             "name": "mutual_info_regression",
-            "line": 294,
+            "line": 295,
             "params": [
                 [
                     "X",
@@ -7905,7 +7905,7 @@
         },
         {
             "name": "mutual_info_classif",
-            "line": 373,
+            "line": 374,
             "params": [
                 [
                     "X",
@@ -8246,7 +8246,7 @@
     "../scikit-learn-master/sklearn\\gaussian_process\\gaussian_process.py": [
         {
             "name": "l1_cross_distances",
-            "line": 23,
+            "line": 25,
             "params": [
                 [
                     "X",
@@ -8357,7 +8357,7 @@
         },
         {
             "name": "sparse_center_data",
-            "line": 70,
+            "line": 72,
             "params": [],
             "returns": [],
             "count": {
@@ -8367,7 +8367,7 @@
         },
         {
             "name": "center_data",
-            "line": 108,
+            "line": 111,
             "params": [],
             "returns": [],
             "count": {
@@ -8377,7 +8377,7 @@
         },
         {
             "name": "_preprocess_data",
-            "line": 144,
+            "line": 145,
             "params": [],
             "returns": [],
             "count": {
@@ -8410,7 +8410,7 @@
     "../scikit-learn-master/sklearn\\linear_model\\coordinate_descent.py": [
         {
             "name": "_alpha_grid",
-            "line": 35,
+            "line": 36,
             "params": [
                 [
                     "X",
@@ -8457,7 +8457,7 @@
         },
         {
             "name": "lasso_path",
-            "line": 126,
+            "line": 128,
             "params": [
                 [
                     "X",
@@ -8533,7 +8533,7 @@
         },
         {
             "name": "enet_path",
-            "line": 268,
+            "line": 271,
             "params": [
                 [
                     "X",
@@ -8617,7 +8617,7 @@
         },
         {
             "name": "_path_residuals",
-            "line": 932,
+            "line": 933,
             "params": [
                 [
                     "X",
@@ -8773,7 +8773,7 @@
     "../scikit-learn-master/sklearn\\linear_model\\least_angle.py": [
         {
             "name": "lars_path",
-            "line": 33,
+            "line": 37,
             "params": [
                 [
                     "X",
@@ -8857,7 +8857,7 @@
         },
         {
             "name": "_lars_path_residues",
-            "line": 857,
+            "line": 860,
             "params": [
                 [
                     "X_train",
@@ -9219,7 +9219,7 @@
         },
         {
             "name": "logistic_regression_path",
-            "line": 450,
+            "line": 456,
             "params": [
                 [
                     "X",
@@ -9319,7 +9319,7 @@
         },
         {
             "name": "_log_reg_scoring_path",
-            "line": 774,
+            "line": 780,
             "params": [
                 [
                     "X",
@@ -9429,7 +9429,7 @@
     "../scikit-learn-master/sklearn\\linear_model\\omp.py": [
         {
             "name": "_cholesky_omp",
-            "line": 27,
+            "line": 28,
             "params": [
                 [
                     "X",
@@ -9481,7 +9481,7 @@
         },
         {
             "name": "_gram_omp",
-            "line": 138,
+            "line": 139,
             "params": [
                 [
                     "Gram",
@@ -9541,7 +9541,7 @@
         },
         {
             "name": "orthogonal_mp",
-            "line": 263,
+            "line": 265,
             "params": [
                 [
                     "X",
@@ -9593,7 +9593,7 @@
         },
         {
             "name": "orthogonal_mp_gram",
-            "line": 405,
+            "line": 408,
             "params": [
                 [
                     "Gram",
@@ -9649,7 +9649,7 @@
         },
         {
             "name": "_omp_path_residues",
-            "line": 663,
+            "line": 664,
             "params": [
                 [
                     "X_train",
@@ -9711,7 +9711,7 @@
         },
         {
             "name": "lasso_stability_path",
-            "line": 570,
+            "line": 576,
             "params": [
                 [
                     "X",
@@ -9807,7 +9807,7 @@
     "../scikit-learn-master/sklearn\\linear_model\\ridge.py": [
         {
             "name": "ridge_regression",
-            "line": 195,
+            "line": 197,
             "params": [
                 [
                     "X",
@@ -9877,7 +9877,7 @@
     "../scikit-learn-master/sklearn\\linear_model\\sag.py": [
         {
             "name": "get_auto_step_size",
-            "line": 18,
+            "line": 20,
             "params": [
                 [
                     "max_squared_sum",
@@ -9917,7 +9917,7 @@
         },
         {
             "name": "sag_solver",
-            "line": 86,
+            "line": 90,
             "params": [
                 [
                     "X",
@@ -10006,7 +10006,7 @@
         },
         {
             "name": "fit_binary",
-            "line": 268,
+            "line": 269,
             "params": [],
             "returns": [],
             "count": {
@@ -10135,7 +10135,7 @@
     "../scikit-learn-master/sklearn\\linear_model\\tests\\test_coordinate_descent.py": [
         {
             "name": "build_dataset",
-            "line": 129,
+            "line": 130,
             "params": [],
             "returns": [],
             "count": {
@@ -10178,7 +10178,7 @@
     "../scikit-learn-master/sklearn\\linear_model\\tests\\test_sag.py": [
         {
             "name": "test_sag_pobj_matches_logistic_regression",
-            "line": 304,
+            "line": 305,
             "params": [],
             "returns": [],
             "count": {
@@ -10188,7 +10188,7 @@
         },
         {
             "name": "test_sag_pobj_matches_ridge_regression",
-            "line": 334,
+            "line": 335,
             "params": [],
             "returns": [],
             "count": {
@@ -10198,7 +10198,7 @@
         },
         {
             "name": "test_sag_regressor_computed_correctly",
-            "line": 366,
+            "line": 367,
             "params": [],
             "returns": [],
             "count": {
@@ -10208,7 +10208,7 @@
         },
         {
             "name": "test_sag_regressor",
-            "line": 455,
+            "line": 456,
             "params": [],
             "returns": [],
             "count": {
@@ -10218,7 +10218,7 @@
         },
         {
             "name": "test_sag_classifier_computed_correctly",
-            "line": 494,
+            "line": 495,
             "params": [],
             "returns": [],
             "count": {
@@ -10228,7 +10228,7 @@
         },
         {
             "name": "test_sag_multiclass_computed_correctly",
-            "line": 537,
+            "line": 538,
             "params": [],
             "returns": [],
             "count": {
@@ -10238,7 +10238,7 @@
         },
         {
             "name": "test_classifier_results",
-            "line": 596,
+            "line": 597,
             "params": [],
             "returns": [],
             "count": {
@@ -10248,7 +10248,7 @@
         },
         {
             "name": "test_binary_classifier_class_weight",
-            "line": 621,
+            "line": 622,
             "params": [],
             "returns": [],
             "count": {
@@ -10258,7 +10258,7 @@
         },
         {
             "name": "test_multiclass_classifier_class_weight",
-            "line": 671,
+            "line": 672,
             "params": [],
             "returns": [],
             "count": {
@@ -10345,7 +10345,7 @@
         },
         {
             "name": "null_space",
-            "line": 109,
+            "line": 110,
             "params": [
                 [
                     "M",
@@ -10384,7 +10384,7 @@
         },
         {
             "name": "locally_linear_embedding",
-            "line": 186,
+            "line": 189,
             "params": [
                 [
                     "X",
@@ -10454,7 +10454,7 @@
     "../scikit-learn-master/sklearn\\manifold\\mds.py": [
         {
             "name": "_smacof_single",
-            "line": 20,
+            "line": 21,
             "params": [
                 [
                     "dissimilarities",
@@ -10510,7 +10510,7 @@
         },
         {
             "name": "smacof",
-            "line": 134,
+            "line": 136,
             "params": [
                 [
                     "dissimilarities",
@@ -10653,7 +10653,7 @@
         },
         {
             "name": "spectral_embedding",
-            "line": 133,
+            "line": 135,
             "params": [
                 [
                     "adjacency",
@@ -10759,7 +10759,7 @@
         },
         {
             "name": "_kl_divergence",
-            "line": 121,
+            "line": 122,
             "params": [
                 [
                     "params",
@@ -10803,7 +10803,7 @@
         },
         {
             "name": "_kl_divergence_bh",
-            "line": 186,
+            "line": 187,
             "params": [
                 [
                     "params",
@@ -10855,7 +10855,7 @@
         },
         {
             "name": "_gradient_descent",
-            "line": 255,
+            "line": 258,
             "params": [
                 [
                     "objective",
@@ -11004,7 +11004,7 @@
     "../scikit-learn-master/sklearn\\metrics\\base.py": [
         {
             "name": "_average_binary_score",
-            "line": 23,
+            "line": 24,
             "params": [
                 [
                     "binary_metric",
@@ -11174,7 +11174,7 @@
         },
         {
             "name": "jaccard_similarity_score",
-            "line": 374,
+            "line": 375,
             "params": [
                 [
                     "y_true",
@@ -11266,7 +11266,7 @@
         },
         {
             "name": "f1_score",
-            "line": 615,
+            "line": 616,
             "params": [
                 [
                     "y_true",
@@ -11306,7 +11306,7 @@
         },
         {
             "name": "fbeta_score",
-            "line": 717,
+            "line": 718,
             "params": [
                 [
                     "y_true",
@@ -11360,7 +11360,7 @@
         },
         {
             "name": "precision_recall_fscore_support",
-            "line": 876,
+            "line": 880,
             "params": [
                 [
                     "y_true",
@@ -11420,7 +11420,7 @@
         },
         {
             "name": "precision_score",
-            "line": 1165,
+            "line": 1166,
             "params": [
                 [
                     "y_true",
@@ -11460,7 +11460,7 @@
         },
         {
             "name": "recall_score",
-            "line": 1265,
+            "line": 1266,
             "params": [
                 [
                     "y_true",
@@ -11500,7 +11500,7 @@
         },
         {
             "name": "classification_report",
-            "line": 1363,
+            "line": 1364,
             "params": [
                 [
                     "y_true",
@@ -11544,7 +11544,7 @@
         },
         {
             "name": "hamming_loss",
-            "line": 1466,
+            "line": 1467,
             "params": [
                 [
                     "y_true",
@@ -11580,7 +11580,7 @@
         },
         {
             "name": "log_loss",
-            "line": 1576,
+            "line": 1577,
             "params": [
                 [
                     "y_true",
@@ -11770,7 +11770,7 @@
         },
         {
             "name": "euclidean_distances",
-            "line": 163,
+            "line": 164,
             "params": [
                 [
                     "X",
@@ -11806,7 +11806,7 @@
         },
         {
             "name": "pairwise_distances_argmin_min",
-            "line": 260,
+            "line": 261,
             "params": [
                 [
                     "X",
@@ -11850,7 +11850,7 @@
         },
         {
             "name": "pairwise_distances_argmin",
-            "line": 389,
+            "line": 390,
             "params": [
                 [
                     "X",
@@ -11890,7 +11890,7 @@
         },
         {
             "name": "manhattan_distances",
-            "line": 470,
+            "line": 471,
             "params": [
                 [
                     "X",
@@ -12346,7 +12346,7 @@
         },
         {
             "name": "pairwise_kernels",
-            "line": 1319,
+            "line": 1320,
             "params": [
                 [
                     "X",
@@ -12412,7 +12412,7 @@
         },
         {
             "name": "average_precision_score",
-            "line": 110,
+            "line": 111,
             "params": [
                 [
                     "y_true",
@@ -12516,7 +12516,7 @@
         },
         {
             "name": "precision_recall_curve",
-            "line": 362,
+            "line": 363,
             "params": [
                 [
                     "y_true",
@@ -12556,7 +12556,7 @@
         },
         {
             "name": "roc_curve",
-            "line": 447,
+            "line": 448,
             "params": [
                 [
                     "y_true",
@@ -12778,7 +12778,7 @@
         },
         {
             "name": "mean_absolute_error",
-            "line": 112,
+            "line": 114,
             "params": [
                 [
                     "y_true",
@@ -12810,7 +12810,7 @@
         },
         {
             "name": "mean_squared_error",
-            "line": 183,
+            "line": 185,
             "params": [
                 [
                     "y_true",
@@ -12842,7 +12842,7 @@
         },
         {
             "name": "mean_squared_log_error",
-            "line": 251,
+            "line": 253,
             "params": [
                 [
                     "y_true",
@@ -12898,7 +12898,7 @@
         },
         {
             "name": "explained_variance_score",
-            "line": 352,
+            "line": 354,
             "params": [
                 [
                     "y_true",
@@ -12930,7 +12930,7 @@
         },
         {
             "name": "r2_score",
-            "line": 444,
+            "line": 445,
             "params": [
                 [
                     "y_true",
@@ -13054,7 +13054,7 @@
         },
         {
             "name": "make_scorer",
-            "line": 403,
+            "line": 404,
             "params": [
                 [
                     "score_func",
@@ -13440,7 +13440,7 @@
     "../scikit-learn-master/sklearn\\metrics\\cluster\\unsupervised.py": [
         {
             "name": "silhouette_score",
-            "line": 22,
+            "line": 23,
             "params": [
                 [
                     "X",
@@ -13715,7 +13715,7 @@
     "../scikit-learn-master/sklearn\\mixture\\dpgmm.py": [
         {
             "name": "log_normalize",
-            "line": 47,
+            "line": 49,
             "params": [],
             "returns": [],
             "count": {
@@ -13725,7 +13725,7 @@
         },
         {
             "name": "wishart_log_det",
-            "line": 61,
+            "line": 63,
             "params": [],
             "returns": [],
             "count": {
@@ -13735,7 +13735,7 @@
         },
         {
             "name": "wishart_logz",
-            "line": 73,
+            "line": 75,
             "params": [],
             "returns": [],
             "count": {
@@ -14153,7 +14153,7 @@
     "../scikit-learn-master/sklearn\\mixture\\gmm.py": [
         {
             "name": "log_multivariate_normal_density",
-            "line": 33,
+            "line": 35,
             "params": [
                 [
                     "X",
@@ -14185,7 +14185,7 @@
         },
         {
             "name": "sample_gaussian",
-            "line": 75,
+            "line": 79,
             "params": [
                 [
                     "mean",
@@ -14267,7 +14267,7 @@
         },
         {
             "name": "distribute_covar_matrix_to_match_covariance_type",
-            "line": 784,
+            "line": 787,
             "params": [],
             "returns": [],
             "count": {
@@ -14277,7 +14277,7 @@
         },
         {
             "name": "_covar_mstep_diag",
-            "line": 804,
+            "line": 805,
             "params": [],
             "returns": [],
             "count": {
@@ -14297,7 +14297,7 @@
         },
         {
             "name": "_covar_mstep_full",
-            "line": 819,
+            "line": 820,
             "params": [],
             "returns": [],
             "count": {
@@ -14307,7 +14307,7 @@
         },
         {
             "name": "_covar_mstep_tied",
-            "line": 837,
+            "line": 838,
             "params": [],
             "returns": [],
             "count": {
@@ -14323,7 +14323,7 @@
     "../scikit-learn-master/sklearn\\mixture\\tests\\test_gmm.py": [
         {
             "name": "test_fit_predict",
-            "line": 408,
+            "line": 409,
             "params": [],
             "returns": [],
             "count": {
@@ -14333,7 +14333,7 @@
         },
         {
             "name": "check_positive_definite_covars",
-            "line": 453,
+            "line": 454,
             "params": [],
             "returns": [],
             "count": {
@@ -14346,7 +14346,7 @@
     "../scikit-learn-master/sklearn\\model_selection\\_search.py": [
         {
             "name": "fit_grid_point",
-            "line": 274,
+            "line": 275,
             "params": [
                 [
                     "X",
@@ -14505,7 +14505,7 @@
     "../scikit-learn-master/sklearn\\model_selection\\_validation.py": [
         {
             "name": "cross_validate",
-            "line": 38,
+            "line": 40,
             "params": [
                 [
                     "estimator",
@@ -14569,7 +14569,7 @@
         },
         {
             "name": "cross_val_score",
-            "line": 218,
+            "line": 220,
             "params": [
                 [
                     "estimator",
@@ -14625,7 +14625,7 @@
         },
         {
             "name": "_fit_and_score",
-            "line": 327,
+            "line": 330,
             "params": [
                 [
                     "estimator",
@@ -14737,7 +14737,7 @@
         },
         {
             "name": "cross_val_predict",
-            "line": 552,
+            "line": 554,
             "params": [
                 [
                     "estimator",
@@ -14793,7 +14793,7 @@
         },
         {
             "name": "_fit_and_predict",
-            "line": 673,
+            "line": 674,
             "params": [
                 [
                     "estimator",
@@ -14879,7 +14879,7 @@
         },
         {
             "name": "permutation_test_score",
-            "line": 773,
+            "line": 775,
             "params": [
                 [
                     "estimator",
@@ -14967,7 +14967,7 @@
         },
         {
             "name": "learning_curve",
-            "line": 912,
+            "line": 916,
             "params": [
                 [
                     "estimator",
@@ -15067,7 +15067,7 @@
         },
         {
             "name": "_incremental_fit_estimator",
-            "line": 1132,
+            "line": 1133,
             "params": [],
             "returns": [],
             "count": {
@@ -15077,7 +15077,7 @@
         },
         {
             "name": "validation_curve",
-            "line": 1153,
+            "line": 1155,
             "params": [
                 [
                     "estimator",
@@ -15160,7 +15160,7 @@
     "../scikit-learn-master/sklearn\\model_selection\\tests\\test_search.py": [
         {
             "name": "compare_cv_results_multimetric_with_single",
-            "line": 1005,
+            "line": 1006,
             "params": [],
             "returns": [],
             "count": {
@@ -15195,7 +15195,7 @@
         },
         {
             "name": "_find_longest_prefix_match",
-            "line": 36,
+            "line": 37,
             "params": [],
             "returns": [],
             "count": {
@@ -15260,7 +15260,7 @@
         },
         {
             "name": "kneighbors_graph",
-            "line": 34,
+            "line": 35,
             "params": [
                 [
                     "X",
@@ -15308,7 +15308,7 @@
         },
         {
             "name": "radius_neighbors_graph",
-            "line": 106,
+            "line": 107,
             "params": [
                 [
                     "X",
@@ -15777,7 +15777,7 @@
         },
         {
             "name": "robust_scale",
-            "line": 1113,
+            "line": 1114,
             "params": [
                 [
                     "X",
@@ -15931,7 +15931,7 @@
         },
         {
             "name": "quantile_transform",
-            "line": 2462,
+            "line": 2467,
             "params": [
                 [
                     "X",
@@ -16071,7 +16071,7 @@
     "../scikit-learn-master/sklearn\\preprocessing\\tests\\test_imputation.py": [
         {
             "name": "_check_statistics",
-            "line": 18,
+            "line": 19,
             "params": [],
             "returns": [],
             "count": {
@@ -16109,7 +16109,7 @@
         },
         {
             "name": "_fit_liblinear",
-            "line": 750,
+            "line": 754,
             "params": [
                 [
                     "X",
@@ -16199,7 +16199,7 @@
     "../scikit-learn-master/sklearn\\svm\\bounds.py": [
         {
             "name": "l1_min_c",
-            "line": 12,
+            "line": 13,
             "params": [
                 [
                     "X",
@@ -16266,7 +16266,7 @@
     "../scikit-learn-master/sklearn\\tests\\test_calibration.py": [
         {
             "name": "test_calibration",
-            "line": 27,
+            "line": 28,
             "params": [],
             "returns": [],
             "count": {
@@ -16470,7 +16470,7 @@
         },
         {
             "name": "export_graphviz",
-            "line": 74,
+            "line": 78,
             "params": [
                 [
                     "decision_tree",
@@ -16576,7 +16576,7 @@
         },
         {
             "name": "check_min_weight_fraction_leaf_with_min_samples_leaf",
-            "line": 710,
+            "line": 711,
             "params": [],
             "returns": [],
             "count": {
@@ -16702,7 +16702,7 @@
         },
         {
             "name": "check_estimators_pickle",
-            "line": 961,
+            "line": 962,
             "params": [],
             "returns": [],
             "count": {
@@ -16712,7 +16712,7 @@
         },
         {
             "name": "check_clusterer_compute_labels_predict",
-            "line": 1056,
+            "line": 1057,
             "params": [],
             "returns": [],
             "count": {
@@ -16722,7 +16722,7 @@
         },
         {
             "name": "check_estimators_fit_returns_self",
-            "line": 1191,
+            "line": 1192,
             "params": [],
             "returns": [],
             "count": {
@@ -16732,7 +16732,7 @@
         },
         {
             "name": "check_estimators_unfitted",
-            "line": 1206,
+            "line": 1207,
             "params": [],
             "returns": [],
             "count": {
@@ -16742,7 +16742,7 @@
         },
         {
             "name": "check_class_weight_balanced_linear_classifier",
-            "line": 1455,
+            "line": 1456,
             "params": [],
             "returns": [],
             "count": {
@@ -16752,7 +16752,7 @@
         },
         {
             "name": "check_no_fit_attributes_set_in_init",
-            "line": 1523,
+            "line": 1524,
             "params": [],
             "returns": [],
             "count": {
@@ -16764,7 +16764,7 @@
     "../scikit-learn-master/sklearn\\utils\\extmath.py": [
         {
             "name": "norm",
-            "line": 30,
+            "line": 32,
             "params": [],
             "returns": [],
             "count": {
@@ -16852,7 +16852,7 @@
         },
         {
             "name": "randomized_range_finder",
-            "line": 143,
+            "line": 145,
             "params": [
                 [
                     "A",
@@ -16888,7 +16888,7 @@
         },
         {
             "name": "randomized_svd",
-            "line": 228,
+            "line": 230,
             "params": [
                 [
                     "M",
@@ -16931,7 +16931,7 @@
         },
         {
             "name": "logsumexp",
-            "line": 352,
+            "line": 354,
             "params": [],
             "returns": [],
             "count": {
@@ -17080,7 +17080,7 @@
         },
         {
             "name": "_incremental_mean_and_var",
-            "line": 645,
+            "line": 646,
             "params": [
                 [
                     "X",
@@ -17510,7 +17510,7 @@
     "../scikit-learn-master/sklearn\\utils\\optimize.py": [
         {
             "name": "_line_search_wolfe12",
-            "line": 27,
+            "line": 28,
             "params": [],
             "returns": [],
             "count": {
@@ -17552,7 +17552,7 @@
         },
         {
             "name": "newton_cg",
-            "line": 114,
+            "line": 115,
             "params": [
                 [
                     "grad_hess",
@@ -17610,7 +17610,7 @@
     "../scikit-learn-master/sklearn\\utils\\random.py": [
         {
             "name": "choice",
-            "line": 18,
+            "line": 21,
             "params": [
                 [
                     "a",
@@ -17646,7 +17646,7 @@
         },
         {
             "name": "random_choice_csc",
-            "line": 116,
+            "line": 117,
             "params": [
                 [
                     "n_samples",
@@ -18180,7 +18180,7 @@
         },
         {
             "name": "all_estimators",
-            "line": 552,
+            "line": 554,
             "params": [
                 [
                     "include_meta_estimators",
@@ -18473,7 +18473,7 @@
         },
         {
             "name": "_ensure_sparse_format",
-            "line": 234,
+            "line": 235,
             "params": [
                 [
                     "spmatrix",
@@ -18509,7 +18509,7 @@
         },
         {
             "name": "check_array",
-            "line": 318,
+            "line": 321,
             "params": [
                 [
                     "array",
@@ -18573,7 +18573,7 @@
         },
         {
             "name": "check_X_y",
-            "line": 505,
+            "line": 509,
             "params": [
                 [
                     "X",
@@ -18716,7 +18716,7 @@
         },
         {
             "name": "check_symmetric",
-            "line": 691,
+            "line": 692,
             "params": [
                 [
                     "array",
@@ -18806,7 +18806,7 @@
         },
         {
             "name": "lsqr",
-            "line": 98,
+            "line": 99,
             "params": [
                 [
                     "A",

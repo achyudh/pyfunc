@@ -1,4 +1,4 @@
-import json, ast, re, sys
+import json, ast, re, sys, linecache
 from fileRetriever import Retriever
 
 
@@ -54,6 +54,16 @@ class Extractor:
         return type_pairs
 
     @staticmethod
+    def get_func_defn_endline(py_file, start_line):
+        endsig_regex = r"\)[ \t]*:"
+        while True:
+            match = re.search(endsig_regex, linecache.getline(py_file, start_line))
+            if match is not None:
+                return start_line
+            else:
+                start_line += 1
+
+    @staticmethod
     def get_declarations(py_file):
         with open(py_file) as fd:
             file_contents = fd.read()
@@ -69,14 +79,16 @@ class Extractor:
                 missed_arg_ctr = 0
                 total_arg_ctr = 0
                 param_types_out = list()
+                max_line_num = node.lineno
                 for argument in node.args.args:
                     if param_types is not None and argument.arg in param_types:
                         param_types_out.append((argument.arg, param_types[argument.arg]))
                     else:
                         missed_arg_ctr += 1
                     total_arg_ctr += 1
+                    max_line_num = max(max_line_num, argument.lineno)
 
-                declarations.append({"name": node.name, "line": node.lineno, "params": param_types_out,
+                declarations.append({"name": node.name, "line": Extractor.get_func_defn_endline(py_file, max_line_num), "params": param_types_out,
                                      "returns": list() if return_types is None else return_types,
                                      "count": {"total_params": total_arg_ctr, "missed_params": missed_arg_ctr}})
         return declarations
