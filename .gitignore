@@ -4,3 +4,13 @@
 *.pyc
 
 file_selector/\.DS_Store
+
+django-master/
+
+matplotlib-master/
+
+networkx-master/
+
+neupy-master/
+
+scikit-image-master/
