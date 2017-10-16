@@ -1,11 +1,11 @@
 
-import sys
+import sys, subprocess, os, re
 from fileRetriever import Retriever
 from varExtractor import Extractor
 def makeComment(struct):
 	comments = {}
 	for path,files in struct.items():
-		print(path)
+		#print(path)
 		comments[path] = []
 		for funcs in files:
 			#print ("method name: " + funcs['name'])
@@ -26,11 +26,11 @@ def makeComment(struct):
 			else:
 				mypy_str += 'None'
 
-			print (funcs['name'])
-			print( mypy_str)
+			#print (funcs['name'])
+			#print( mypy_str)
 			comments[path].append({'method' : funcs['name'], 'line' : funcs['line'], 'comment': mypy_str})
-			print ("***")
-	print(comments)
+			#print ("***")
+	#print(comments)
 	return comments
 
 def get_mypy_type(string):
@@ -50,7 +50,9 @@ def get_mypy_type(string):
 		return 'None'
 
 def plantComments(comments):
+	filenames = []
 	for item, value in comments.items():
+
 		f = open(item, 'r')
 		contents = f.readlines()
 		f.close()
@@ -60,12 +62,36 @@ def plantComments(comments):
 			line = line + " " + comment['comment'] + "\n"
 			contents[comment['line']-1] = line
 
+		contents = ['from typing import Tuple, List \n'] + contents
+		filenames.append(item+'_')
 		f2 = open(item+'_', 'w')
 		contents = "".join(contents)
 		f2.write(contents)
 		f2.close()
 		#print (contents)
 		#print ("_____")
+	return collect_output(filenames)
+
+def collect_output(filenames):
+	output = {}
+	for item in filenames:
+		output[item] = []
+		#print (item)
+		p= os.popen("mypy --py2 "+item).read()
+		print ('--')
+		#print(p)
+		# for argument mismatch
+		m = re.findall('(.*?):([0-9]+):\s*(error:.*?incompatible type.*)', p, re.IGNORECASE)
+		for (f,l,e) in m:
+			output[f].append(('parameter', l, e))
+
+		# return mismatch
+		m = re.findall('(.*?):([0-9]+):\s*(error: missing return statement.*)',  p, re.IGNORECASE)
+		for (f,l,e) in m:		
+			output[f].append(('return', l,e))
+
+		
+	return output
 
 
 if __name__ == "__main__":
@@ -82,6 +108,11 @@ if __name__ == "__main__":
         output_json[py_file] = declarations
     #print (output_json)
     comments = makeComment(output_json)
-    plantComments(comments)
+    out = plantComments(comments)
+
+    for k,v in out.items():
+        print("\nfile: " + k)
+        for item in v:
+            print('\n\t type: '+ item[0] + '\n\t\tline: ' + item[1] + '\n\t\t' + item[2])
 
 	
