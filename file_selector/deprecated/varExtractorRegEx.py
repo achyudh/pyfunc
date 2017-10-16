@@ -145,7 +145,7 @@ if __name__ == "__main__":
         raise Exception("Usage: python varExtractorRegEx.py <path\\to\\root\\directory>") 
     root_folder = sys.argv[1]
 
-    py_files = retriever.list_all_files_in_folder(root_folder)
+    py_files = retriever.list_python_files(root_folder)
     output_json = {}
 
     for py_file in py_files:

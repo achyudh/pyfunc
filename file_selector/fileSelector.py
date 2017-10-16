@@ -38,7 +38,7 @@ class Selector():
             If True, prints all files and relevant docstrings into the console
         :return: None
         """
-        file_names = self.retriever.list_all_files_in_folder(root_folder)
+        file_names = self.retriever.list_python_files(root_folder)
         files_and_docstrings = {}
         for id in range(len(file_names)):
             file_name = file_names[id]
