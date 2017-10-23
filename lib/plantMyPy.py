@@ -40,12 +40,14 @@ def get_mypy_type(string):
 		return 'int'
 	elif 'float' in string.lower() :
 		return 'float'
-	elif 'array' in string.lower() :
+	elif 'array' in string.lower() or "list" in string.lower():
 		return 'List'
 	elif 'boolean' in string.lower():
 		return 'bool'
 	elif 'dict' in string.lower():
 		return 'Tuple'
+	elif 'object' in string.lower():
+		return "Any"
 	else:
 		return 'None'
 
@@ -58,11 +60,11 @@ def plantComments(comments):
 		f.close()
 		for comment in value:
 		#contents.insert(item['line']-1, item['comment'])
-			line = contents[comment['line']-1][:-2]
+			line = contents[comment['line']-1][:-1]
 			line = line + " " + comment['comment'] + "\n"
 			contents[comment['line']-1] = line
 
-		contents = ['from typing import Tuple, List \n'] + contents
+		contents = ['from typing import Tuple, List, Any \n'] + contents
 		filenames.append(item+'_')
 		f2 = open(item+'_', 'w')
 		contents = "".join(contents)
@@ -77,7 +79,7 @@ def collect_output(filenames):
 	for item in filenames:
 		#output[item] = []
 		#print (item)
-		p= os.popen("mypy --py2 "+item).read()
+		p= os.popen("mypy --py2 --follow-imports=silent "+item).read()
 		print ('--')
 		#print(p)
 		# for argument mismatch
