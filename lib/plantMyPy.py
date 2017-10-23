@@ -34,68 +34,66 @@ def makeComment(struct):
     return comments
 
 def get_mypy_type(string):
-    if 'str' in string.lower():
-        return 'str'
-    elif 'int' in string.lower():
-        return 'int'
-    elif 'float' in string.lower() :
-        return 'float'
-    elif 'array' in string.lower() :
-        return 'List'
-    elif 'boolean' in string.lower():
-        return 'bool'
-    elif 'dict' in string.lower():
-        return 'Tuple'
-    else:
-        return 'None'
-
+	if 'str' in string.lower():
+		return 'str'
+	elif 'int' in string.lower():
+		return 'int'
+	elif 'float' in string.lower() :
+		return 'float'
+	elif 'array' in string.lower() or "list" in string.lower():
+		return 'List'
+	elif 'boolean' in string.lower():
+		return 'bool'
+	elif 'dict' in string.lower():
+		return 'Tuple'
+	elif 'object' in string.lower():
+		return "Any"
+	else:
+		return 'None'
 
 def plantComments(comments):
-    filenames = []
-    for item, value in comments.items():
-        try:
-            f = open(item, 'r')
-            contents = f.readlines()
-            f.close()
-            for comment in value:
-                #contents.insert(item['line']-1, item['comment'])
-                line = contents[comment['line']-1][:-2]
-                line = line + " " + comment['comment'] + "\n"
-                contents[comment['line']-1] = line
+	filenames = []
+	for item, value in comments.items():
 
-            contents = ['from typing import Tuple, List \n'] + contents
-            filenames.append(item+'_')
-            f2 = open(item+'_', 'w')
-            contents = "".join(contents)
-            f2.write(contents)
-            f2.close()
-        except:
-            pass
-            #print (contents)
-            #print ("_____")
-    return collect_output(filenames)
+		f = open(item, 'r')
+		contents = f.readlines()
+		f.close()
+		for comment in value:
+		#contents.insert(item['line']-1, item['comment'])
+			line = contents[comment['line']-1][:-1]
+			line = line + " " + comment['comment'] + "\n"
+			contents[comment['line']-1] = line
 
+		contents = ['from typing import Tuple, List, Any \n'] + contents
+		filenames.append(item+'_')
+		f2 = open(item+'_', 'w')
+		contents = "".join(contents)
+		f2.write(contents)
+		f2.close()
+		#print (contents)
+		#print ("_____")
+	return collect_output(filenames)
 
 def collect_output(filenames):
-    output = []
-    for item in filenames:
-        #output[item] = []
-        #print (item)
-        p= os.popen("mypy --py2 "+item).read()
-        print ('--')
-        #print(p)
-        # for argument mismatch
-        m = re.findall('(.*?):([0-9]+):\s*(error:.*?incompatible type.*)', p, re.IGNORECASE)
-        for (f,l,e) in m:
-            output.append((item, 'parameter', l, e))
+	output = []
+	for item in filenames:
+		#output[item] = []
+		#print (item)
+		p= os.popen("mypy --py2 --follow-imports=silent "+item).read()
+		print ('--')
+		#print(p)
+		# for argument mismatch
+		m = re.findall('(.*?):([0-9]+):\s*(error:.*?incompatible type.*)', p, re.IGNORECASE)
+		for (f,l,e) in m:
+			output.append((item, 'parameter', l, e))
 
-        # return mismatch
-        m = re.findall('(.*?):([0-9]+):\s*(error: missing return statement.*)',  p, re.IGNORECASE)
-        for (f,l,e) in m:
-            output.append((item, 'return', l,e))
+		# return mismatch
+		m = re.findall('(.*?):([0-9]+):\s*(error: missing return statement.*)',  p, re.IGNORECASE)
+		for (f,l,e) in m:		
+			output.append((item, 'return', l,e))
 
-
-    return output
+		
+	return output
 
 
 if __name__ == "__main__":
