@@ -59,7 +59,7 @@ if __name__ == "__main__":
     #     raise Exception("Usage: python varExtractor.py <path\\to\\root\\directory>")
     # root_folder = sys.argv[1]
     # py_files = retriever.list_all_files_in_folder(root_folder)
-    py_files = Retriever.list_python_files("../scikit-learn-master/sklearn")
+    py_files = Retriever.list_python_files("../test")
     output_json = {}
 
     total_arg_ctr = 0
