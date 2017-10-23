@@ -1,0 +1,5 @@
+
+file: ..\MSR-Snapshot\neupy-master\neupy\algorithms\gd\base.py_
+	 type: parameter
+		line: 149
+		error: Incompatible types in assignment (expression has type "Tuple[Type[None], Type[int]]", base class "BaseProperty" defined the type as "Type[object]")

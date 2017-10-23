@@ -1,0 +1,9 @@
+django: 632 - 46 samples
+matplotlib: 550 - 41 samples
+networkx: 810 - 60 samples
+neupy: 148 - 10 samples
+scikit-image: 491 - 36 samples
+scikit-learn: 452 - 33 samples
+
+total: 3083
+n: 226

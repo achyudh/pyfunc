@@ -1,0 +1,5 @@
+
+file: ..\MSR-Snapshot\scikit-image-master\skimage\morphology\misc.py_
+	 type: parameter
+		line: 14
+		error: Incompatible types in assignment (expression has type "Tuple[str, str, str, str, str, str]", variable has type "Tuple[str, str, str, str]")

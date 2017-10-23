@@ -1,0 +1,9 @@
+
+file: ..\MSR-Snapshot\scikit-learn-master\sklearn\datasets\rcv1.py_
+	 type: parameter
+		line: 207
+		error: Incompatible types in assignment (expression has type "int", variable has type "unicode")
+file: ..\MSR-Snapshot\scikit-learn-master\sklearn\datasets\rcv1.py_
+	 type: parameter
+		line: 209
+		error: Incompatible types in assignment (expression has type "unicode", variable has type "int")

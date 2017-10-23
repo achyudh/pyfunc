@@ -105,19 +105,17 @@ if __name__ == "__main__":
 
     output_json = {}
     #random sample
-    k = 100
+    k = 33
     all_variable_declarations = list()
     for py_file in py_files:
          # Finds all variable type specifications and adds them to a list
          all_variable_declarations.extend(Extractor.get_declarations(py_file))
     #Select k random variables
-
     random_sample = random.sample(all_variable_declarations, k)
     for py_file in py_files:
-        # Finds all variable type specifications and adds them to a list
+        #Finds all variable type specifications and adds them to a list
         declarations = Extractor.get_declarations(py_file)
         #Check if any variable of this file is in the random selection, if so add them to the list
-        #random_variable_declarations = list(set(random_sample) & set(declarations))
         #create set of dict values in the random_sample
         random_sample_name = set(d["name"] for d in random_sample)
         #Get the intersection between the random_sample and the variables of the py_file
@@ -127,8 +125,16 @@ if __name__ == "__main__":
     comments = makeComment(output_json)
     out = plantComments(comments)
 
+    # Open a file
+    fo = open("./random sampling/scikit-learn.txt", "w")
     for k,v,a,b in out:
         print("\nfile: " + k)
         #for item in v:
         	#     print('\n\t type: '+ item[0] + '\n\t\tline: ' + item[1] + '\n\t\t' + item[2])
         print('\n\t type: '+ v + '\n\t\tline: ' + a + '\n\t\t' + b)
+
+        fo.write("\nfile: " + k)
+        fo.write('\n\t type: '+ v + '\n\t\tline: ' + a + '\n\t\t' + b)
+
+    # Close file
+    fo.close()

@@ -1,0 +1,5 @@
+
+file: ..\MSR-Snapshot\networkx-master\networkx\readwrite\gpickle.py_
+	 type: parameter
+		line: 102
+		error: Argument 1 to "load" has incompatible type "str"; expected "IO[str]"
