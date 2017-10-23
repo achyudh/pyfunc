@@ -3,35 +3,35 @@ import sys, subprocess, os, re, random
 from fileRetriever import Retriever
 from varExtractor import Extractor
 def makeComment(struct):
-	comments = {}
-	for path,files in struct.items():
-		#print(path)
-		comments[path] = []
-		for funcs in files:
-			#print ("method name: " + funcs['name'])
-			mypy_str = "# type: ( "
+    comments = {}
+    for path,files in struct.items():
+        #print(path)
+        comments[path] = []
+        for funcs in files:
+            #print ("method name: " + funcs['name'])
+            mypy_str = "# type: ( "
 
-			if len(funcs['params']) > 0:
-				for params in  funcs['params']:
-					#print (params)
-					mypy_str += get_mypy_type(params[1]) + ', ' 
-					#print ("param: " + params)
-				mypy_str = mypy_str[:-2]
-			mypy_str += ') -> '
-			if len(funcs['returns']) > 0:
-				for returns in funcs['returns']:
-					mypy_str += get_mypy_type(returns[1]) + ', ' 
-					#print ("return: " + returns)
-				mypy_str = mypy_str[:-2]
-			else:
-				mypy_str += 'None'
+            if len(funcs['params']) > 0:
+                for params in  funcs['params']:
+                    #print (params)
+                    mypy_str += get_mypy_type(params[1]) + ', '
+                    #print ("param: " + params)
+                mypy_str = mypy_str[:-2]
+            mypy_str += ') -> '
+            if len(funcs['returns']) > 0:
+                for returns in funcs['returns']:
+                    mypy_str += get_mypy_type(returns[1]) + ', '
+                    #print ("return: " + returns)
+                mypy_str = mypy_str[:-2]
+            else:
+                mypy_str += 'None'
 
-			#print (funcs['name'])
-			#print( mypy_str)
-			comments[path].append({'method' : funcs['name'], 'line' : funcs['line'], 'comment': mypy_str})
-			#print ("***")
-	#print(comments)
-	return comments
+            #print (funcs['name'])
+            #print( mypy_str)
+            comments[path].append({'method' : funcs['name'], 'line' : funcs['line'], 'comment': mypy_str})
+            #print ("***")
+    #print(comments)
+    return comments
 
 def get_mypy_type(string):
 	if 'str' in string.lower():
@@ -40,12 +40,14 @@ def get_mypy_type(string):
 		return 'int'
 	elif 'float' in string.lower() :
 		return 'float'
-	elif 'array' in string.lower() :
+	elif 'array' in string.lower() or "list" in string.lower():
 		return 'List'
 	elif 'boolean' in string.lower():
 		return 'bool'
 	elif 'dict' in string.lower():
 		return 'Tuple'
+	elif 'object' in string.lower():
+		return "Any"
 	else:
 		return 'None'
 
@@ -58,11 +60,11 @@ def plantComments(comments):
 		f.close()
 		for comment in value:
 		#contents.insert(item['line']-1, item['comment'])
-			line = contents[comment['line']-1][:-2]
+			line = contents[comment['line']-1][:-1]
 			line = line + " " + comment['comment'] + "\n"
 			contents[comment['line']-1] = line
 
-		contents = ['from typing import Tuple, List \n'] + contents
+		contents = ['from typing import Tuple, List, Any \n'] + contents
 		filenames.append(item+'_')
 		f2 = open(item+'_', 'w')
 		contents = "".join(contents)
@@ -73,22 +75,22 @@ def plantComments(comments):
 	return collect_output(filenames)
 
 def collect_output(filenames):
-	output = {}
+	output = []
 	for item in filenames:
-		output[item] = []
+		#output[item] = []
 		#print (item)
-		p= os.popen("mypy --py2 "+item).read()
+		p= os.popen("mypy --py2 --follow-imports=silent "+item).read()
 		print ('--')
 		#print(p)
 		# for argument mismatch
 		m = re.findall('(.*?):([0-9]+):\s*(error:.*?incompatible type.*)', p, re.IGNORECASE)
 		for (f,l,e) in m:
-			output[f].append(('parameter', l, e))
+			output.append((item, 'parameter', l, e))
 
 		# return mismatch
 		m = re.findall('(.*?):([0-9]+):\s*(error: missing return statement.*)',  p, re.IGNORECASE)
 		for (f,l,e) in m:		
-			output[f].append(('return', l,e))
+			output.append((item, 'return', l,e))
 
 		
 	return output
@@ -125,7 +127,8 @@ if __name__ == "__main__":
     comments = makeComment(output_json)
     out = plantComments(comments)
 
-    for k,v in out.items():
+    for k,v,a,b in out:
         print("\nfile: " + k)
-        for item in v:
-            print('\n\t type: '+ item[0] + '\n\t\tline: ' + item[1] + '\n\t\t' + item[2])
+        #for item in v:
+        	#     print('\n\t type: '+ item[0] + '\n\t\tline: ' + item[1] + '\n\t\t' + item[2])
+        print('\n\t type: '+ v + '\n\t\tline: ' + a + '\n\t\t' + b)
