@@ -3,35 +3,35 @@ import sys, subprocess, os, re
 from fileRetriever import Retriever
 from varExtractor import Extractor
 def makeComment(struct):
-	comments = {}
-	for path,files in struct.items():
-		#print(path)
-		comments[path] = []
-		for funcs in files:
-			#print ("method name: " + funcs['name'])
-			mypy_str = "# type: ( "
+    comments = {}
+    for path,files in struct.items():
+        #print(path)
+        comments[path] = []
+        for funcs in files:
+            #print ("method name: " + funcs['name'])
+            mypy_str = "# type: ( "
 
-			if len(funcs['params']) > 0:
-				for params in  funcs['params']:
-					#print (params)
-					mypy_str += get_mypy_type(params[1]) + ', ' 
-					#print ("param: " + params)
-				mypy_str = mypy_str[:-2]
-			mypy_str += ') -> '
-			if len(funcs['returns']) > 0:
-				for returns in funcs['returns']:
-					mypy_str += get_mypy_type(returns[1]) + ', ' 
-					#print ("return: " + returns)
-				mypy_str = mypy_str[:-2]
-			else:
-				mypy_str += 'None'
+            if len(funcs['params']) > 0:
+                for params in  funcs['params']:
+                    #print (params)
+                    mypy_str += get_mypy_type(params[1]) + ', '
+                    #print ("param: " + params)
+                mypy_str = mypy_str[:-2]
+            mypy_str += ') -> '
+            if len(funcs['returns']) > 0:
+                for returns in funcs['returns']:
+                    mypy_str += get_mypy_type(returns[1]) + ', '
+                    #print ("return: " + returns)
+                mypy_str = mypy_str[:-2]
+            else:
+                mypy_str += 'None'
 
-			#print (funcs['name'])
-			#print( mypy_str)
-			comments[path].append({'method' : funcs['name'], 'line' : funcs['line'], 'comment': mypy_str})
-			#print ("***")
-	#print(comments)
-	return comments
+            #print (funcs['name'])
+            #print( mypy_str)
+            comments[path].append({'method' : funcs['name'], 'line' : funcs['line'], 'comment': mypy_str})
+            #print ("***")
+    #print(comments)
+    return comments
 
 def get_mypy_type(string):
 	if 'str' in string.lower():
@@ -117,4 +117,4 @@ if __name__ == "__main__":
         #for item in v:
         print('\n\t type: '+ v + '\n\t\tline: ' + a + '\n\t\t' + b)
 
-	
+
