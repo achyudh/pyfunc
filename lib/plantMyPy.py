@@ -112,7 +112,7 @@ if __name__ == "__main__":
 
     for k,v,a,b in out:
         print("\nfile: " + k)
-        for item in v:
-            print('\n\t type: '+ v + '\n\t\tline: ' + a + '\n\t\t' + b)
+        #for item in v:
+        print('\n\t type: '+ v + '\n\t\tline: ' + a + '\n\t\t' + b)
 
 	
