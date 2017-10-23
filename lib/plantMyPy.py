@@ -1,5 +1,5 @@
 
-import sys, subprocess, os, re
+import sys, subprocess, os, re, random
 from fileRetriever import Retriever
 from varExtractor import Extractor
 def makeComment(struct):
@@ -102,11 +102,25 @@ if __name__ == "__main__":
     py_files = retriever.list_python_files(root_folder)
 
     output_json = {}
-
+    #random sample
+    k = 100
+    all_variable_declarations = list()
     for py_file in py_files:
+         # Finds all variable type specifications and adds them to a list
+         all_variable_declarations.extend(Extractor.get_declarations(py_file))
+    #Select k random variables
+    random_sample = random.sample(all_variable_declarations, k)
+    for py_file in py_files:
+        # Finds all variable type specifications and adds them to a list
         declarations = Extractor.get_declarations(py_file)
-        output_json[py_file] = declarations
-    #print (output_json)
+        #Check if any variable of this file is in the random selection, if so add them to the list
+        #random_variable_declarations = list(set(random_sample) & set(declarations))
+        #create set of dict values in the random_sample
+        random_sample_name = set(d["name"] for d in random_sample)
+        #Get the intersection between the random_sample and the variables of the py_file
+        random_variable_declarations = [d for d in declarations if d["name"] in random_sample_name]
+        if len(random_variable_declarations) > 0:
+        	output_json[py_file] = random_variable_declarations
     comments = makeComment(output_json)
     out = plantComments(comments)
 
