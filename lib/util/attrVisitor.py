@@ -24,17 +24,18 @@ class AttrVisitor(GenericNodeVisitor):
     def __fetch_attr(self, node):
         if node.children[0].tagname == 'title' and ("Parameters" in node.children[0][0]):
             curr_index = 0
-            definition_items = node.children[1].children
-            while curr_index < len(definition_items):
-                if ':' in definition_items[curr_index].rawsource:
-                    node_rawsource = definition_items[curr_index].rawsource.split(':', 1)
-                    if ',' in node_rawsource[0]:
-                        var_list = [x.strip() for x in node_rawsource[0].split(',')]
-                        for variable in var_list:
-                            self.args[variable] = node_rawsource[1].split('\n')[0].strip()
-                    else:
-                        self.args[node_rawsource[0].strip()] = node_rawsource[1].split('\n')[0].strip()
-                curr_index += 1
+            if len(node.children) > 1:
+                definition_items = node.children[1].children
+                while curr_index < len(definition_items):
+                    if ':' in definition_items[curr_index].rawsource:
+                        node_rawsource = definition_items[curr_index].rawsource.split(':', 1)
+                        if ',' in node_rawsource[0]:
+                            var_list = [x.strip() for x in node_rawsource[0].split(',')]
+                            for variable in var_list:
+                                self.args[variable] = node_rawsource[1].split('\n')[0].strip()
+                        else:
+                            self.args[node_rawsource[0].strip()] = node_rawsource[1].split('\n')[0].strip()
+                    curr_index += 1
 
         elif node.children[0].tagname == 'title' and ("Returns" in node.children[0][0]):
             curr_index = 0
