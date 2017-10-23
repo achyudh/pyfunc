@@ -73,9 +73,9 @@ def plantComments(comments):
 	return collect_output(filenames)
 
 def collect_output(filenames):
-	output = {}
+	output = []
 	for item in filenames:
-		output[item] = []
+		#output[item] = []
 		#print (item)
 		p= os.popen("mypy --py2 "+item).read()
 		print ('--')
@@ -83,12 +83,12 @@ def collect_output(filenames):
 		# for argument mismatch
 		m = re.findall('(.*?):([0-9]+):\s*(error:.*?incompatible type.*)', p, re.IGNORECASE)
 		for (f,l,e) in m:
-			output[f].append(('parameter', l, e))
+			output.append((item, 'parameter', l, e))
 
 		# return mismatch
 		m = re.findall('(.*?):([0-9]+):\s*(error: missing return statement.*)',  p, re.IGNORECASE)
 		for (f,l,e) in m:		
-			output[f].append(('return', l,e))
+			output.append((item, 'return', l,e))
 
 		
 	return output
@@ -110,9 +110,9 @@ if __name__ == "__main__":
     comments = makeComment(output_json)
     out = plantComments(comments)
 
-    for k,v in out.items():
+    for k,v,a,b in out:
         print("\nfile: " + k)
         for item in v:
-            print('\n\t type: '+ item[0] + '\n\t\tline: ' + item[1] + '\n\t\t' + item[2])
+            print('\n\t type: '+ v + '\n\t\tline: ' + a + '\n\t\t' + b)
 
 	
