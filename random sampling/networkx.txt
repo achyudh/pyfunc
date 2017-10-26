@@ -244,37 +244,47 @@ def setup_module(module):
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\readwrite\edgelist.py
 def parse_edgelist(lines, comments='#', delimiter=None,
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\readwrite\gexf.py
 def setup_module(module):
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\readwrite\gml.py
 def unescape(text):
-
++ format issue
+- n/a
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\readwrite\graphml.py
 def setup_module(module):
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\readwrite\nx_shp.py
 def setup_module(module):
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\readwrite\nx_yaml.py
 def setup_module(module):
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\readwrite\pajek.py
 def read_pajek(path, encoding='UTF-8'):
-
++ incomplete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\utils\random_sequence.py
 def zipf_rv(alpha, xmin=1, seed=None):
-
++ complete
+- 0 mismatch
 def discrete_sequence(n, distribution=None, cdistribution=None):
-
++ format issue
+- n/a
 def weighted_choice(mapping):
-
++ format issue
+- n/a
 ====================
