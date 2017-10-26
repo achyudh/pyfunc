@@ -34,7 +34,7 @@ def makeComment(struct):
     return comments
 
 def get_mypy_type(string):
-	if 'str' in string.lower():
+	if 'str' in string.lower() or 'text' in string.lower():
 		return 'str'
 	elif 'int' in string.lower():
 		return 'int'
