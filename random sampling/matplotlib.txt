@@ -106,41 +106,52 @@ def test_imshow_float128():
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_legend.py
 def test_fancy():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_quiver.py
 def test_bad_masked_sizes():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_rcparams.py
 def test_Issue_1713():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_simplification.py
 def test_sine_plus_noise():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_streamplot.py
 def test_masks_and_nans():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_table.py
 def test_label_colours():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_texmanager.py
 def test_fontconfig_preamble():
-
++ format issue
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_triangulation.py
 def test_trianalyzer_mismatched_indices():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\mpl_toolkits\axes_grid1\inset_locator.py
 def mark_inset(parent_axes, inset_axes, loc1, loc2, **kwargs):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\mpl_toolkits\tests\test_mplot3d.py
 def test_contourf3d_fill():
-
++ missing
+- n/a
 ====================
+
