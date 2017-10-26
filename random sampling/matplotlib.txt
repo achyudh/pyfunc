@@ -1,0 +1,146 @@
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\afm.py
+def _parse_composites(fh):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\artist.py
+def setp(obj, *args, **kwargs):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\backend_bases.py
+def get_registered_canvas_class(format):
+
+def key_press_handler(event, canvas, toolbar=None):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\backend_tools.py
+default_toolbar_tools = [['navigation', ['home', 'back', 'forward']],
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\dates.py
+def epoch2num(e):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\dviread.py
+def _vffile(texname):
+
+def _fontfile(texname, class_, suffix, cache):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\image.py
+def composite_images(images, renderer, magnification=1.0):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\mlab.py
+def entropy(y, bins):
+
+def detrend_linear(y):
+
+def offset_line(y, yerr):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\patches.py
+def _point_along_a_line(x0, y0, x1, y1, d):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\pyplot.py
+def text(x, y, s, fontdict=None, withdash=False, **kwargs):
+
+def set_cmap(cmap):
+
+def boxplot(x, notch=None, sym=None, vert=None, whis=None, positions=None,
+
+def quiver(*args, **kw):
+
+def ylim(*args, **kwargs):
+
+def pcolor(*args, **kwargs):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\backends\backend_wx.py
+def DEBUG_MSG(string, lvl=3, o=None):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\backends\qt_editor\formlayout.py
+def tuple_to_qfont(tup):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_axes.py
+def test_errorbar_colorcycle():
+
+def test_polar_rorigin():
+
+def test_subplot_key_hash():
+
+def test_fillbetween_cycle():
+
+def test_symlog():
+
+def test_bxp_custompatchartist():
+
+def test_specgram_noise_phase():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_colors.py
+def test_tableau_order():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_compare_images.py
+def test_image_compare_shade_difference():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_container.py
+def test_errorbar_remove():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_figure.py
+def test_figure_legend():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_image.py
+def test_no_interpolation_origin():
+
+def test_imshow_endianess():
+
+def test_imshow_float128():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_legend.py
+def test_fancy():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_quiver.py
+def test_bad_masked_sizes():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_rcparams.py
+def test_Issue_1713():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_simplification.py
+def test_sine_plus_noise():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_streamplot.py
+def test_masks_and_nans():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_table.py
+def test_label_colours():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_texmanager.py
+def test_fontconfig_preamble():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\matplotlib\tests\test_triangulation.py
+def test_trianalyzer_mismatched_indices():
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\mpl_toolkits\axes_grid1\inset_locator.py
+def mark_inset(parent_axes, inset_axes, loc1, loc2, **kwargs):
+
+====================
+..\MSR-Snapshot\matplotlib-master\lib\mpl_toolkits\tests\test_mplot3d.py
+def test_contourf3d_fill():
+
+====================

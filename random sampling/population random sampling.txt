@@ -1,9 +1,11 @@
-django: 632 - 46 samples
-matplotlib: 550 - 41 samples
-networkx: 810 - 60 samples
-neupy: 148 - 10 samples
-scikit-image: 491 - 36 samples
-scikit-learn: 452 - 33 samples
+django: 961- 24 samples
+matplotlib: 1758 - 45 samples
+networkx: 1563 - 40 samples
+neupy: 168 - 4 samples
+scikit-image: 1563- 40 samples
+scikit-learn: 3391 - 86 samples
 
-total: 3083
-n: 226
+total: 9404
+n: 239
+
+n = (9404*0.8*0.2*((1.96)^2))/(9403*(0.05^2)+0.8*0.2*((1.96)^2)) = 239.62
