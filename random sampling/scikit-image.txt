@@ -118,37 +118,47 @@ def seam_carve(image, energy_map, mode, num, border=1, force_copy=True):
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\transform\tests\test_pyramids.py
 def test_build_gaussian_pyramid_nd():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\transform\tests\test_warps.py
 def test_invalid():
-
++ missing
+- n/a
 def test_homography():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\util\dtype.py
 def img_as_uint(image, force_copy=False):
-
++ complete
+- 0 mismatch
 def img_as_ubyte(image, force_copy=False):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_montage.py
 def test_montage_simple_rgb():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_random_noise.py
 def test_salt():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_regular_grid.py
 def test_regular_grid_2d_8():
-
++
+-
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_shape.py
 def test_view_as_windows_step_tuple():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\viewer\utils\core.py
 def update_axes_image(image_axes, image):
-
++ complete
+- 0 mismatch
 ====================
