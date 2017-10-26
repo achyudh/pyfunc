@@ -260,75 +260,96 @@ def test_calibration_nan_imputer():
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_cross_validation.py
 def check_valid_split(train, test, n_samples=None):
-
++ missing
+- n/a
 def test_check_is_partition():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_discriminant_analysis.py
 def test_lda_orthogonality():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_dummy.py
 def test_stratified_strategy_sparse_target():
-
++ missing
+- n/a
 def test_most_frequent_and_prior_strategy_sparse_target():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_grid_search.py
 def test_grid_search_sparse_scoring():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_learning_curve.py
 def test_learning_curve_unsupervised():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_multiclass.py
 def test_ovr_fit_predict():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_multioutput.py
 def test_classifier_chain_fit_and_predict_with_logistic_regression():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_naive_bayes.py
 def test_discretenb_partial_fit():
-
++ missing
+- n/a
 def test_discretenb_predict_proba():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\tree\tests\test_export.py
 def test_graphviz_toy():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\tree\tests\test_tree.py
 def test_max_leaf_nodes_max_depth():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\utils\estimator_checks.py
 def check_get_params_invariance(name, estimator_orig):
-
++ missing
+- n/a
 def check_transformer_general(name, transformer):
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\utils\sparsefuncs.py
 def inplace_csr_row_scale(X, scale):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\utils\validation.py
 def _shape_repr(shape):
-
++ format issue
+- n/a
 def check_consistent_length(*arrays):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\utils\tests\test_metaestimators.py
 def test_delegated_docstring():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\utils\tests\test_murmurhash.py
 def test_mmhash3_int():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-learn-master\sklearn\utils\tests\test_validation.py
 def test_check_memory():
-
++ missing
+- n/a
 ====================
