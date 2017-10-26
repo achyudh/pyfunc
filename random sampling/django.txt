@@ -68,25 +68,31 @@ def escape(text):
 ====================
 ..\MSR-Snapshot\django-master\django\utils\http.py
 def parse_etags(etag_str):
-
-====================
++ format issue
+- n/a
+==================== *
 ..\MSR-Snapshot\django-master\django\utils\lorem_ipsum.py
 def paragraph():
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\django-master\django\utils\translation\trans_null.py
 def to_locale(language):
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\django-master\django\utils\translation\trans_real.py
 def to_locale(language):
-
++ format issue
+- n/a
 ====================
 ..\MSR-Snapshot\django-master\django\views\debug.py
 def get_exception_reporter_filter(request):
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\django-master\django\views\decorators\cache.py
 def never_cache(view_func):
-
++ format issue
+- n/a
 ====================
