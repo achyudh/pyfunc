@@ -1,0 +1,92 @@
+..\MSR-Snapshot\django-master\django\contrib\auth\checks.py
+def check_user_model(app_configs=None, **kwargs):
+
+====================
+..\MSR-Snapshot\django-master\django\core\validators.py
+def ip_address_validators(protocol, unpack_ipv4):
+
+====================
+..\MSR-Snapshot\django-master\django\core\checks\urls.py
+def check_resolver(resolver):
+
+====================
+..\MSR-Snapshot\django-master\django\core\checks\security\sessions.py
+def _session_app():
+
+def add_session_cookie_message(message):
+
+def add_httponly_message(message):
+
+====================
+..\MSR-Snapshot\django-master\django\core\files\move.py
+def _samefile(src, dst):
+
+====================
+..\MSR-Snapshot\django-master\django\core\management\utils.py
+def get_random_secret_key():
+
+====================
+..\MSR-Snapshot\django-master\django\core\serializers\python.py
+def Deserializer(object_list, *, using=DEFAULT_DB_ALIAS, ignorenonexistent=False, **options):
+
+====================
+..\MSR-Snapshot\django-master\django\middleware\csrf.py
+def _get_new_csrf_string():
+
+====================
+..\MSR-Snapshot\django-master\django\template\context_processors.py
+def csrf(request):
+
+====================
+..\MSR-Snapshot\django-master\django\template\defaultfilters.py
+def truncatewords_html(value, arg):
+
+def addslashes(value):
+
+====================
+..\MSR-Snapshot\django-master\django\test\utils.py
+def captured_stdin():
+
+def teardown_test_environment():
+
+====================
+..\MSR-Snapshot\django-master\django\urls\conf.py
+def _path(route, view, kwargs=None, name=None, Pattern=None):
+
+====================
+..\MSR-Snapshot\django-master\django\utils\crypto.py
+def salted_hmac(key_salt, value, secret=None):
+
+====================
+..\MSR-Snapshot\django-master\django\utils\duration.py
+def duration_iso_string(duration):
+
+====================
+..\MSR-Snapshot\django-master\django\utils\html.py
+def escape(text):
+
+====================
+..\MSR-Snapshot\django-master\django\utils\http.py
+def parse_etags(etag_str):
+
+====================
+..\MSR-Snapshot\django-master\django\utils\lorem_ipsum.py
+def paragraph():
+
+====================
+..\MSR-Snapshot\django-master\django\utils\translation\trans_null.py
+def to_locale(language):
+
+====================
+..\MSR-Snapshot\django-master\django\utils\translation\trans_real.py
+def to_locale(language):
+
+====================
+..\MSR-Snapshot\django-master\django\views\debug.py
+def get_exception_reporter_filter(request):
+
+====================
+..\MSR-Snapshot\django-master\django\views\decorators\cache.py
+def never_cache(view_func):
+
+====================

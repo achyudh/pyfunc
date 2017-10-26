@@ -1,5 +1,16 @@
+..\MSR-Snapshot\neupy-master\neupy\storage.py
+def convert_numpy_array_to_list_recursively(data):
 
-file: ..\MSR-Snapshot\neupy-master\neupy\algorithms\gd\base.py_
-	 type: parameter
-		line: 149
-		error: Incompatible types in assignment (expression has type "Tuple[Type[None], Type[int]]", base class "BaseProperty" defined the type as "Type[object]")
+====================
+..\MSR-Snapshot\neupy-master\neupy\algorithms\competitive\sofm.py
+def linear_initialization(data, features_grid):
+
+====================
+..\MSR-Snapshot\neupy-master\neupy\algorithms\gd\conjgrad.py
+def polak_ribiere(gradient_old, gradient_new, weight_old_delta):
+
+====================
+..\MSR-Snapshot\neupy-master\neupy\architectures\alexnet.py
+def alexnet():
+
+====================
