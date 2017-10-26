@@ -12,5 +12,6 @@ def polak_ribiere(gradient_old, gradient_new, weight_old_delta):
 ====================
 ..\MSR-Snapshot\neupy-master\neupy\architectures\alexnet.py
 def alexnet():
-
++ incomplete
+- 0 mismatch
 ====================
