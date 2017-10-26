@@ -70,7 +70,7 @@ def escape(text):
 def parse_etags(etag_str):
 + format issue
 - n/a
-==================== *
+====================
 ..\MSR-Snapshot\django-master\django\utils\lorem_ipsum.py
 def paragraph():
 + complete
