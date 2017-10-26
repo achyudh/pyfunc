@@ -1,9 +1,40 @@
 django: 961- 24 samples
+D: 1-6
+N: 7-12
+Ac: 13-18
+Az: 19-24
+
 matplotlib: 1758 - 45 samples
+D: 1-11
+N: 12-23 *
+Ac: 24-34
+Az: 35-45
+
 networkx: 1563 - 40 samples
+D: 1-10
+N: 11-20
+Ac: 21-30
+Az: 31-40
+
 neupy: 168 - 4 samples
+D: 1
+N: 2
+Ac: 3
+Az: 4
+
 scikit-image: 1563- 40 samples
+D: 1-10
+N: 11-20
+Ac: 21-30
+Az: 31-40
+
 scikit-learn: 3391 - 86 samples
+D: 1-22 *
+N: 23-43
+Ac:  44-65 *
+Az: 66-86
+
+* - assigned one extra sample
 
 total: 9404
 n: 239
