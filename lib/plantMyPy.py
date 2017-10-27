@@ -34,7 +34,7 @@ def makeComment(struct):
     return comments
 
 def get_mypy_type(string):
-	if 'str' in string.lower():
+	if 'str' in string.lower() or 'text' in string.lower():
 		return 'str'
 	elif 'int' in string.lower():
 		return 'int'
@@ -116,5 +116,4 @@ if __name__ == "__main__":
         print("\nfile: " + k)
         #for item in v:
         print('\n\t type: '+ v + '\n\t\tline: ' + a + '\n\t\t' + b)
-
 

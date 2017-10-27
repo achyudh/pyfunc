@@ -1,0 +1,174 @@
+..\MSR-Snapshot\scikit-image-master\skimage\color\colorconv.py
+def gray2rgb(image, alpha=None):
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\data\tests\test_data.py
+def test_astronaut():
++ format issue
+- n/a
+def test_horse():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\draw\draw.py
+def circle(r, c, radius, shape=None):
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\draw\tests\test_draw.py
+def test_rectangle_end():
++ missing
+- n/a
+def test_ellipse_perimeter_shape():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\exposure\exposure.py
+def histogram(image, nbins=256):
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\exposure\tests\test_exposure.py
+def test_rescale_in_range_clip():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\external\tifffile\tifffile.py
+def imagej_description_dict(description):
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\feature\blob.py
+def blob_dog(image, min_sigma=1, max_sigma=50, sigma_ratio=1.6, threshold=2.0,
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\feature\corner.py
+def hessian_matrix(image, sigma=1, mode='constant', cval=0, order=None):
+
+def corner_peaks(image, min_distance=1, threshold_abs=None, threshold_rel=0.1,
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\feature\peak.py
+def _prominent_peaks(image, min_xdistance=1, min_ydistance=1,
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\feature\tests\test_template.py
+def test_3d():
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\filters\rank\generic.py
+def gradient(image, selem, out=None, mask=None, shift_x=False, shift_y=False):
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\filters\tests\test_edges.py
+def test_roberts_zeros():
+
+def test_sobel_v_vertical():
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\io\collection.py
+def alphanumeric_key(s):
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\io\manage_plugins.py
+def plugin_info(plugin):
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\io\tests\test_fits.py
+def _same_ImageCollection(collection1, collection2):
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\io\tests\test_io.py
+def test_stack_non_array():
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\measure\pnpoly.py
+def points_in_poly(points, verts):
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\measure\tests\test_regionprops.py
+def test_invalid():
+
+def test_equals():
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\morphology\greyreconstruct.py
+def reconstruction(seed, mask, method='dilation', selem=None, offset=None):
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\restoration\uft.py
+def uifft2(inarray):
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\restoration\tests\test_denoise.py
+def test_denoise_nl_means_3d():
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\segmentation\random_walker_segmentation.py
+def _compute_gradients_3d(data, spacing):
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\segmentation\tests\test_chan_vese.py
+def test_chan_vese_flat_level_set():
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\segmentation\tests\test_random_walker.py
+def test_3d():
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\segmentation\tests\test_slic.py
+def test_slic_zero():
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\transform\seam_carving.py
+def seam_carve(image, energy_map, mode, num, border=1, force_copy=True):
+
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\transform\tests\test_pyramids.py
+def test_build_gaussian_pyramid_nd():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\transform\tests\test_warps.py
+def test_invalid():
++ missing
+- n/a
+def test_homography():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\util\dtype.py
+def img_as_uint(image, force_copy=False):
++ complete
+- 0 mismatch
+def img_as_ubyte(image, force_copy=False):
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_montage.py
+def test_montage_simple_rgb():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_random_noise.py
+def test_salt():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_regular_grid.py
+def test_regular_grid_2d_8():
++
+-
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_shape.py
+def test_view_as_windows_step_tuple():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-image-master\skimage\viewer\utils\core.py
+def update_axes_image(image_axes, image):
++ complete
+- 0 mismatch
+====================

@@ -1,0 +1,380 @@
+..\MSR-Snapshot\scikit-learn-master\sklearn\cluster\bicluster.py
+def _log_normalize(X):
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\cluster\tests\test_birch.py
+def test_partial_fit():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\cluster\tests\test_hierarchical.py
+def test_structured_linkage_tree():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\cluster\tests\test_k_means.py
+def test_k_means_perfect_init():
++ missing
+- n/a
+def test_predict():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\cluster\tests\test_mean_shift.py
+def test_meanshift_predict():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\covariance\robust_covariance.py
+def c_step(X, n_support, remaining_iterations=30, initial_estimates=None,
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\cross_decomposition\tests\test_pls.py
+def test_scale_and_stability():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\datasets\twenty_newsgroups.py
+def fetch_20newsgroups_vectorized(subset="train", remove=(), data_home=None,
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\datasets\tests\test_base.py
+def teardown_module():
++ format issue
+- n/a
+def test_load_breast_cancer():
++ format issue
+- n/a
+def test_load_digits():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\datasets\tests\test_covtype.py
+def test_fetch():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\datasets\tests\test_lfw.py
+def test_load_fake_lfw_people():
++ format issue
+- n/a
+def teardown_module():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\decomposition\nmf.py
+def _compute_regularization(alpha, l1_ratio, regularization):
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\decomposition\tests\test_dict_learning.py
+def test_sparse_coder_estimator():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\decomposition\tests\test_online_lda.py
+def test_lda_fit_transform():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\decomposition\tests\test_pca.py
+def test_pca_arpack_solver():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\ensemble\bagging.py
+def _generate_indices(random_state, bootstrap, n_population, n_samples):
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\ensemble\tests\test_forest.py
+def test_max_leaf_nodes_max_depth():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\ensemble\tests\test_gradient_boosting.py
+def test_complete_classification():
++ format issue
+- n/a
+def test_staged_predict_proba():
++ format issue
+- n/a
+def test_max_leaf_nodes_max_depth():
++ format issue
+- n/a
+def test_gradient_boosting_early_stopping():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\ensemble\tests\test_partial_dependence.py
+def test_plot_partial_dependence():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\externals\joblib\disk.py
+def mkdirp(d):
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\feature_extraction\tests\test_dict_vectorizer.py
+def test_unseen_or_no_features():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\feature_extraction\tests\test_text.py
+def test_sublinear_tf():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\feature_selection\tests\test_chi2.py
+def mkchi2(k):
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\feature_selection\tests\test_feature_select.py
+def test_f_oneway_vs_scipy_stats():
+
+def test_boundary_case_ch2():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\feature_selection\tests\test_from_model.py
+def test_partial_fit():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\feature_selection\tests\test_rfe.py
+def test_rfe_min_step():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\gaussian_process\tests\test_gpc.py
+def test_multi_class_n_jobs():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\linear_model\sag.py
+def sag_solver(X, y, sample_weight=None, loss='log', alpha=1., beta=0.,
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\linear_model\tests\test_coordinate_descent.py
+def test_1d_multioutput_enet_and_multitask_enet_cv():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\linear_model\tests\test_logistic.py
+def test_predict_2_classes():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\linear_model\tests\test_ransac.py
+def test_ransac_inliers_outliers():
+
+def test_ransac_sparse_csc():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\linear_model\tests\test_ridge.py
+def _test_ridge_loo(filter_):
+
+def test_ridge_classifier_no_support_multilabel():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\linear_model\tests\test_sag.py
+def test_binary_classifier_class_weight():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\linear_model\tests\test_sgd.py
+def test_gradient_huber():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\manifold\tests\test_locally_linear.py
+def test_lle_init_parameters():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\metrics\classification.py
+def _check_targets(y_true, y_pred):
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\metrics\pairwise.py
+def cosine_distances(X, Y=None):
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\metrics\ranking.py
+def average_precision_score(y_true, y_score, average="macro",
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\metrics\tests\test_classification.py
+def test_multilabel_zero_one_loss_subset():
+
+def test_matthews_corrcoef_nan():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\metrics\tests\test_pairwise.py
+def test_pairwise_distances():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\metrics\tests\test_score_objects.py
+def teardown_module():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\mixture\dpgmm.py
+def _bound_state_log_lik(X, initial_bound, precs, means, covariance_type):
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\model_selection\tests\test_search.py
+def test_stochastic_gradient_loss_param():
+
+def test_grid_search_sparse_scoring():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\model_selection\tests\test_split.py
+def test_stratifiedshufflesplit_list_input():
+
+def check_valid_split(train, test, n_samples=None):
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\model_selection\tests\test_validation.py
+def test_learning_curve_unsupervised():
+
+def test_gridsearchcv_cross_val_predict_with_method():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\neighbors\tests\test_approximate.py
+def test_partial_fit():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\neighbors\tests\test_ball_tree.py
+def check_results(kernel, h, atol, rtol, breadth_first, bt, Y, dens_true):
+
+def test_ball_tree_two_point(n_samples=100, n_features=3):
+
+def test_ball_tree_pickle():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\neighbors\tests\test_neighbors.py
+def test_dtype_convert():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\neural_network\tests\test_rbm.py
+def test_partial_fit():
+
+def test_sample_hiddens():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\preprocessing\tests\test_data.py
+def test_standard_scaler_trasform_with_partial_fit():
+
+def test_robust_scaler_zero_variance_features():
+
+def test_maxabs_scaler_zero_variance_features():
+
+def test_quantile_transform_sparse_ignore_zeros():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\semi_supervised\tests\test_label_propagation.py
+def test_convergence_speed():
+
+def test_predict():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\svm\base.py
+def _fit_liblinear(X, y, C, fit_intercept, intercept_scaling, class_weight,
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\svm\tests\test_svm.py
+def test_oneclass_decision_function():
+
+def test_unicode_kernel():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_calibration.py
+def test_calibration_nan_imputer():
+
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_cross_validation.py
+def check_valid_split(train, test, n_samples=None):
++ missing
+- n/a
+def test_check_is_partition():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_discriminant_analysis.py
+def test_lda_orthogonality():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_dummy.py
+def test_stratified_strategy_sparse_target():
++ missing
+- n/a
+def test_most_frequent_and_prior_strategy_sparse_target():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_grid_search.py
+def test_grid_search_sparse_scoring():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_learning_curve.py
+def test_learning_curve_unsupervised():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_multiclass.py
+def test_ovr_fit_predict():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_multioutput.py
+def test_classifier_chain_fit_and_predict_with_logistic_regression():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\tests\test_naive_bayes.py
+def test_discretenb_partial_fit():
++ missing
+- n/a
+def test_discretenb_predict_proba():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\tree\tests\test_export.py
+def test_graphviz_toy():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\tree\tests\test_tree.py
+def test_max_leaf_nodes_max_depth():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\utils\estimator_checks.py
+def check_get_params_invariance(name, estimator_orig):
++ missing
+- n/a
+def check_transformer_general(name, transformer):
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\utils\sparsefuncs.py
+def inplace_csr_row_scale(X, scale):
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\utils\validation.py
+def _shape_repr(shape):
++ format issue
+- n/a
+def check_consistent_length(*arrays):
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\utils\tests\test_metaestimators.py
+def test_delegated_docstring():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\utils\tests\test_murmurhash.py
+def test_mmhash3_int():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\scikit-learn-master\sklearn\utils\tests\test_validation.py
+def test_check_memory():
++ missing
+- n/a
+====================

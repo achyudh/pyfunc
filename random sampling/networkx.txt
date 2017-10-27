@@ -1,0 +1,301 @@
+..\MSR-Snapshot\networkx-master\networkx\convert_matrix.py
+def setup_module(module):
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\clique.py
+def make_clique_bipartite(G, fpos=None, create_using=None, name=None):
++ incomplete
+- 0 mismatch
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\communicability_alg.py
+def setup_module(module):
++ missing
+- n/a
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\cuts.py
+def conductance(G, S, T=None, weight=None):
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\dag.py
+def antichains(G):
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\distance_measures.py
+def diameter(G, e=None, usebounds=False):
++ incomplete
+- 0 mismatch
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\link_prediction.py
+def ra_index_soundarajan_hopcroft(G, ebunch=None, community='community'):
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\approximation\tests\test_approx_clust_coeff.py
+def test_petersen():
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\approximation\tests\test_connectivity.py
+def test_petersen():
++ missing
+- n/a
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\assortativity\correlation.py
+def setup_module(module):
++ format issue
+- n/a
+def numeric_assortativity_coefficient(G, attribute, nodes=None):
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\assortativity\mixing.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\assortativity\pairs.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\bipartite\cluster.py
+def cc_max(nu,nv):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\bipartite\edgelist.py
+def parse_edgelist(lines, comments='#', delimiter=None,
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\bipartite\generators.py
+def configuration_model(aseq, bseq, create_using=None, seed=None):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\bipartite\matrix.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\bipartite\spectral.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\centrality\current_flow_betweenness.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\centrality\current_flow_betweenness_subset.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\centrality\current_flow_closeness.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\centrality\eigenvector.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\centrality\katz.py
+def setup_module(module):
+
+def katz_centrality_numpy(G, alpha=0.1, beta=1.0, normalized=True,
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\centrality\subgraph_alg.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\coloring\greedy_coloring.py
+def strategy_largest_first(G, colors):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\components\attracting.py
+def is_attracting_component(G):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\connectivity\kcomponents.py
+def _generate_partition(G, cuts, k):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\connectivity\utils.py
+def build_auxiliary_edge_connectivity(G):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\connectivity\tests\test_connectivity.py
+def test_petersen():
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\connectivity\tests\test_edge_augmentation.py
+def test_shell():
+
+def test_tarjan():
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\connectivity\tests\test_edge_kcomponents.py
+def test_shell():
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\connectivity\tests\test_kcomponents.py
+def test_shell():
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\connectivity\tests\test_kcutsets.py
+def test_shell():
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\flow\tests\test_maxflow.py
+def test_preflow_push_global_relabel_freq():
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\link_analysis\hits_alg.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\link_analysis\pagerank_alg.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\operators\product.py
+def lexicographic_product(G, H):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\shortest_paths\dense.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\shortest_paths\weighted.py
+def all_pairs_bellman_ford_path(G, cutoff=None, weight='weight'):
+
+def bellman_ford_predecessor_and_distance(G, source, target=None,
+
+def _weight_function(G, weight):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\tests\test_graphical.py
+def test_string_input():
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\tests\test_simple_paths.py
+def test_ssp_multigraph():
+
+def test_ssp_target_missing():
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\tree\branchings.py
+def greedy_branching(G, attr='weight', default=1, kind='max'):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\algorithms\tree\tests\test_recognition.py
+def test_multicycle():
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\classes\filters.py
+def hide_edges(edges):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\classes\tests\test_function.py
+def test_get_node_attributes():
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\drawing\layout.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\drawing\nx_agraph.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\drawing\nx_pydot.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\drawing\nx_pylab.py
+def setup_module(module):
+
+def apply_alpha(colors, alpha, elem_list, cmap=None, vmin=None, vmax=None):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\generators\classic.py
+def star_graph(n, create_using=None):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\generators\directed.py
+def random_k_out_graph(n, k, alpha, self_loops=True, seed=None):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\generators\random_graphs.py
+def newman_watts_strogatz_graph(n, k, p, seed=None):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\linalg\algebraicconnectivity.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\linalg\attrmatrix.py
+def setup_module(module):
+
+def attr_sparse_matrix(G, edge_attr=None, node_attr=None,
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\linalg\graphmatrix.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\linalg\laplacianmatrix.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\linalg\modularitymatrix.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\linalg\spectrum.py
+def setup_module(module):
+
+====================
+..\MSR-Snapshot\networkx-master\networkx\readwrite\edgelist.py
+def parse_edgelist(lines, comments='#', delimiter=None,
++ complete
+- 0 mismatch
+====================
+..\MSR-Snapshot\networkx-master\networkx\readwrite\gexf.py
+def setup_module(module):
++ missing
+- n/a
+====================
+..\MSR-Snapshot\networkx-master\networkx\readwrite\gml.py
+def unescape(text):
++ format issue
+- n/a
+====================
+..\MSR-Snapshot\networkx-master\networkx\readwrite\graphml.py
+def setup_module(module):
++ missing
+- n/a
+====================
+..\MSR-Snapshot\networkx-master\networkx\readwrite\nx_shp.py
+def setup_module(module):
++ missing
+- n/a
+====================
+..\MSR-Snapshot\networkx-master\networkx\readwrite\nx_yaml.py
+def setup_module(module):
++ missing
+- n/a
+====================
+..\MSR-Snapshot\networkx-master\networkx\readwrite\pajek.py
+def read_pajek(path, encoding='UTF-8'):
++ incomplete
+- 0 mismatch
+====================
+..\MSR-Snapshot\networkx-master\networkx\utils\random_sequence.py
+def zipf_rv(alpha, xmin=1, seed=None):
++ complete
+- 0 mismatch
+def discrete_sequence(n, distribution=None, cdistribution=None):
++ format issue
+- n/a
+def weighted_choice(mapping):
++ format issue
+- n/a
+====================
