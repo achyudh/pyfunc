@@ -20,3 +20,5 @@ scikit-learn-master/
 MSR-Snapshot\.zip
 
 lib/scikit\.json
+
+lib/.mypy_cache
