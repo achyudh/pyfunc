@@ -1,38 +1,48 @@
 ..\MSR-Snapshot\scikit-image-master\skimage\color\colorconv.py
 def gray2rgb(image, alpha=None):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\data\tests\test_data.py
 def test_astronaut():
-
++ format issue
+- n/a
 def test_horse():
-
++ format issue
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\draw\draw.py
 def circle(r, c, radius, shape=None):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\draw\tests\test_draw.py
 def test_rectangle_end():
-
++ missing
+- n/a
 def test_ellipse_perimeter_shape():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\exposure\exposure.py
 def histogram(image, nbins=256):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\exposure\tests\test_exposure.py
 def test_rescale_in_range_clip():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\external\tifffile\tifffile.py
 def imagej_description_dict(description):
-
++ format issue
+- n/a
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\feature\blob.py
 def blob_dog(image, min_sigma=1, max_sigma=50, sigma_ratio=1.6, threshold=2.0,
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\scikit-image-master\skimage\feature\corner.py
 def hessian_matrix(image, sigma=1, mode='constant', cval=0, order=None):

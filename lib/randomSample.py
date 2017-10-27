@@ -43,7 +43,7 @@ class RandomSample():
             #file = open(path, "r")
             # Finds all methods and adds them to a list
             for line in file:
-                if(line.startswith("def")):
+                if(line.startswith("def ")):
                     all_methods.append(line)
         #Select k random variables
         print(len(all_methods))
@@ -56,7 +56,7 @@ class RandomSample():
             #file = open(path, "r")
             # Finds all methods and adds them to a list
             for line in file:
-                if(line.startswith("def")):
+                if(line.startswith("def ")):
                     file_methods.append(line)
             #Check if any method of this file is in the random selection, if so add them to the list
             random_methods = list(set(random_sample) & set(file_methods))

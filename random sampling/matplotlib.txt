@@ -1,42 +1,54 @@
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\afm.py
 def _parse_composites(fh):
-
++ format issue
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\artist.py
 def setp(obj, *args, **kwargs):
-
++ format issue
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\backend_bases.py
 def get_registered_canvas_class(format):
-
++ format issue
+- n/a
 def key_press_handler(event, canvas, toolbar=None):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\backend_tools.py
-default_toolbar_tools = [['navigation', ['home', 'back', 'forward']],
-
+def add_tools_to_container(container, tools=default_toolbar_tools):
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\dates.py
 def epoch2num(e):
-
++ format issue
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\dviread.py
 def _vffile(texname):
-
++ missing
+- n/a
 def _fontfile(texname, class_, suffix, cache):
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\image.py
 def composite_images(images, renderer, magnification=1.0):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\mlab.py
 def entropy(y, bins):
-
++ format issue
+- n/a
 def detrend_linear(y):
-
++ complete
+- 1 mismatch
 def offset_line(y, yerr):
-
++ format issue
+- n/a
 ====================
 ..\MSR-Snapshot\matplotlib-master\lib\matplotlib\patches.py
 def _point_along_a_line(x0, y0, x1, y1, d):

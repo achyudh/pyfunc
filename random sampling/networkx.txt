@@ -1,44 +1,55 @@
 ..\MSR-Snapshot\networkx-master\networkx\convert_matrix.py
 def setup_module(module):
-
++ format issue
+- n/a
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\algorithms\clique.py
 def make_clique_bipartite(G, fpos=None, create_using=None, name=None):
-
++ incomplete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\algorithms\communicability_alg.py
 def setup_module(module):
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\algorithms\cuts.py
 def conductance(G, S, T=None, weight=None):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\algorithms\dag.py
 def antichains(G):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\algorithms\distance_measures.py
 def diameter(G, e=None, usebounds=False):
-
++ incomplete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\algorithms\link_prediction.py
 def ra_index_soundarajan_hopcroft(G, ebunch=None, community='community'):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\algorithms\approximation\tests\test_approx_clust_coeff.py
 def test_petersen():
-
++ format issue
+- n/a
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\algorithms\approximation\tests\test_connectivity.py
 def test_petersen():
-
++ missing
+- n/a
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\algorithms\assortativity\correlation.py
 def setup_module(module):
-
++ format issue
+- n/a
 def numeric_assortativity_coefficient(G, attribute, nodes=None):
-
++ complete
+- 0 mismatch
 ====================
 ..\MSR-Snapshot\networkx-master\networkx\algorithms\assortativity\mixing.py
 def setup_module(module):

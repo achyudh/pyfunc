@@ -1,16 +1,16 @@
-django: 961- 24 samples
+django: 958- 24 samples
 D: 1-6
 N: 7-12
 Ac: 13-18
 Az: 19-24
 
-matplotlib: 1758 - 45 samples
+matplotlib: 1752 - 45 samples
 D: 1-11
 N: 12-23 *
 Ac: 24-34
 Az: 35-45
 
-networkx: 1563 - 40 samples
+networkx: 1551 - 40 samples
 D: 1-10
 N: 11-20
 Ac: 21-30
@@ -22,13 +22,13 @@ N: 2
 Ac: 3
 Az: 4
 
-scikit-image: 1563- 40 samples
+scikit-image: 1562- 40 samples
 D: 1-10
 N: 11-20
 Ac: 21-30
 Az: 31-40
 
-scikit-learn: 3391 - 86 samples
+scikit-learn: 3390 - 86 samples
 D: 1-22 *
 N: 23-43
 Ac:  44-65 *
@@ -36,7 +36,11 @@ Az: 66-86
 
 * - assigned one extra sample
 
-total: 9404
+total: 9381
 n: 239
 
-n = (9404*0.8*0.2*((1.96)^2))/(9403*(0.05^2)+0.8*0.2*((1.96)^2)) = 239.62
+n = (9381*0.8*0.2*((1.96)^2))/(9380*(0.05^2)+0.8*0.2*((1.96)^2)) = 239.61
+
+Key:
++ incomplete comment: complete | incomplete | format issue | missing [missing is missing comment, format issue is when description is given but no param is defined]
+- mismatch: X mismatch | n/a [x is the number of mismatches seen. 0 if none]
