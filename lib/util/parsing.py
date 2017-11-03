@@ -10,3 +10,8 @@ def fns_with_docstring(file_contents):
         if node.name[0] != '_' and ast.get_docstring(node) is not None:
             fn_list.append(node.name)
     return fn_list
+
+
+with open("../../test/t.py") as fd:
+    file_contents = fd.read()
+    print(fns_with_docstring(file_contents))

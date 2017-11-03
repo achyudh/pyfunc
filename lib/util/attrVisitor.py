@@ -22,7 +22,7 @@ class AttrVisitor(GenericNodeVisitor):
         return visitor.args, visitor.returns
 
     def __fetch_attr(self, node):
-        if node.children[0].tagname == 'title' and ("Parameters" in node.children[0][0]):
+        if node.children[0].tagname == 'title' and (("Parameters" in node.children[0][0]) or ("Other Parameters" in node.children[0][0])):
             curr_index = 0
             if len(node.children) > 1:
                 definition_items = node.children[1].children
