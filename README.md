@@ -1,5 +1,7 @@
 # PyFunc-Signature-Parser
 
+**Note:** This repository is outdated. The actual code for this repository is being hosted privately till we send out our paper for publication. I will update this space with the corresponding link when it is ready.
+
 ## Modules
 ### lib.fileSelector
 Adjust the parameters in the __main__ call to traverse a specified folder and retrieve all the file names where variable and/or return types are specified in the docstring as well as those docstrings. Additionally, the parameters allow you to either print the output to the console or write them to a file.
