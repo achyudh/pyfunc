@@ -1,6 +1,6 @@
 # PyFunc-Signature-Parser
 
-**Note:** This repository is outdated. The actual code for this repository is being hosted privately till we send out our paper for publication. I will update this space with the corresponding link when it is ready.
+**Note:** This repository is outdated. The actual code for this repository is being hosted privately till we send out our draft for publication.
 
 ## Modules
 ### lib.fileSelector
