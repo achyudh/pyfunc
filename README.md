@@ -1,6 +1,6 @@
 # PyFunc-Signature-Parser
-Walks Python AST and parses doctrings to provide hints to MyPy for checking inconsistencies between docstrings and code Edit
-Add topics. 
+Walks Python AST and parses doctrings to provide hints to MyPy for checking inconsistencies between docstrings and code.
+ 
 *Note: This repository is outdated. The actual code for this repository is being hosted privately till we send out our draft for publication.*
 
 ## Modules
