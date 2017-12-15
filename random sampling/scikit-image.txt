@@ -1,174 +1,200 @@
-..\MSR-Snapshot\scikit-image-master\skimage\color\colorconv.py
-def gray2rgb(image, alpha=None):
-+ complete
-- 0 mismatch
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\data\tests\test_data.py
-def test_astronaut():
-+ format issue
-- n/a
-def test_horse():
-+ format issue
-- n/a
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\draw\draw.py
-def circle(r, c, radius, shape=None):
-+ complete
-- 0 mismatch
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\draw\tests\test_draw.py
-def test_rectangle_end():
-+ missing
-- n/a
-def test_ellipse_perimeter_shape():
-+ missing
-- n/a
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\exposure\exposure.py
-def histogram(image, nbins=256):
-+ complete
-- 0 mismatch
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\exposure\tests\test_exposure.py
-def test_rescale_in_range_clip():
-+ missing
-- n/a
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\external\tifffile\tifffile.py
-def imagej_description_dict(description):
-+ format issue
-- n/a
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\feature\blob.py
-def blob_dog(image, min_sigma=1, max_sigma=50, sigma_ratio=1.6, threshold=2.0,
-+ complete
-- 0 mismatch
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\feature\corner.py
-def hessian_matrix(image, sigma=1, mode='constant', cval=0, order=None):
-
-def corner_peaks(image, min_distance=1, threshold_abs=None, threshold_rel=0.1,
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\feature\peak.py
-def _prominent_peaks(image, min_xdistance=1, min_ydistance=1,
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\feature\tests\test_template.py
-def test_3d():
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\filters\rank\generic.py
-def gradient(image, selem, out=None, mask=None, shift_x=False, shift_y=False):
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\filters\tests\test_edges.py
-def test_roberts_zeros():
-
-def test_sobel_v_vertical():
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\io\collection.py
-def alphanumeric_key(s):
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\io\manage_plugins.py
-def plugin_info(plugin):
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\io\tests\test_fits.py
-def _same_ImageCollection(collection1, collection2):
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\io\tests\test_io.py
-def test_stack_non_array():
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\measure\pnpoly.py
-def points_in_poly(points, verts):
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\measure\tests\test_regionprops.py
-def test_invalid():
-
-def test_equals():
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\morphology\greyreconstruct.py
-def reconstruction(seed, mask, method='dilation', selem=None, offset=None):
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\restoration\uft.py
-def uifft2(inarray):
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\restoration\tests\test_denoise.py
-def test_denoise_nl_means_3d():
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\segmentation\random_walker_segmentation.py
-def _compute_gradients_3d(data, spacing):
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\segmentation\tests\test_chan_vese.py
-def test_chan_vese_flat_level_set():
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\segmentation\tests\test_random_walker.py
-def test_3d():
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\segmentation\tests\test_slic.py
-def test_slic_zero():
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\transform\seam_carving.py
-def seam_carve(image, energy_map, mode, num, border=1, force_copy=True):
-
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\transform\tests\test_pyramids.py
-def test_build_gaussian_pyramid_nd():
-+ missing
-- n/a
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\transform\tests\test_warps.py
-def test_invalid():
-+ missing
-- n/a
-def test_homography():
-+ missing
-- n/a
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\util\dtype.py
-def img_as_uint(image, force_copy=False):
-+ complete
-- 0 mismatch
-def img_as_ubyte(image, force_copy=False):
-+ complete
-- 0 mismatch
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_montage.py
-def test_montage_simple_rgb():
-+ missing
-- n/a
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_random_noise.py
-def test_salt():
-+ missing
-- n/a
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_regular_grid.py
-def test_regular_grid_2d_8():
-+
--
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\util\tests\test_shape.py
-def test_view_as_windows_step_tuple():
-+ missing
-- n/a
-====================
-..\MSR-Snapshot\scikit-image-master\skimage\viewer\utils\core.py
-def update_axes_image(image_axes, image):
-+ complete
-- 0 mismatch
-====================
+../MSR-Snapshot/scikit-image-master/skimage/morphology/selem.py
+	cube
+	+ complete
+	- 0 mismatch
+1 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/colorconv.py
+	lab2xyz
+	+ complete
+	- 2 mismatch (datatype not explicitly defined)
+2 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/colorconv.py
+	combine_stains
+	+ complete
+	- 0 mismatch
+3 ====================
+../MSR-Snapshot/scikit-image-master/skimage/draw/draw.py
+	circle_perimeter
+	+ complete
+	- 1 mismatch (datatype not defined)
+4 ====================
+../MSR-Snapshot/scikit-image-master/skimage/draw/draw.py
+	ellipse_perimeter
+	+ complete
+	- 0 mismatch (datatype not defined)
+5 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/adapt_rgb.py
+	adapt_rgb
+	+ complete
+	- 0 mismatch
+6 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/colorconv.py
+	luv2rgb
+	+ complete
+	- 0 mismatch
+7 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/colorconv.py
+	rgba2rgb
+	+ complete
+	- 1 mismatch (comment says array, code says tuple)
+8 ====================
+../MSR-Snapshot/scikit-image-master/skimage/io/_plugins/pil_plugin.py
+	imread
+	+ complete
+	- 0 mismatch
+9 ====================
+../MSR-Snapshot/scikit-image-master/skimage/segmentation/boundaries.py
+	mark_boundaries
+	+ complete
+	- 1 mismatch (color is a tuple, but called a list)
+10 ====================
+../MSR-Snapshot/scikit-image-master/skimage/filters/thresholding.py
+	threshold_otsu
+	+ complete
+	- 0 mismatch
+11 ====================
+../MSR-Snapshot/scikit-image-master/skimage/segmentation/boundaries.py
+	find_boundaries
+	+ complete
+	- 0 mismatch
+12 ====================
+../MSR-Snapshot/scikit-image-master/skimage/feature/texture.py
+	draw_multiblock_lbp
+	+ partial
+	- 1 mismatch (variable names in definition and comment don't match)
+13 ====================
+../MSR-Snapshot/scikit-image-master/skimage/feature/texture.py
+	greycoprops
+	+ complete
+	- 1 mismatch (datatype not explicitly stated)
+14 ====================
+../MSR-Snapshot/scikit-image-master/skimage/feature/texture.py
+	local_binary_pattern
+	+ complete
+	- 1 mismatch (datatype not defined)
+15 ====================
+../MSR-Snapshot/scikit-image-master/skimage/measure/simple_metrics.py
+	compare_nrmse
+	+ complete
+	- 1 mismatch (datatype is not defined)
+16 ====================
+../MSR-Snapshot/scikit-image-master/skimage/util/arraycrop.py
+	crop
+	+ complete
+	- 1 mismatch (datatype is not defined)
+17 ====================
+../MSR-Snapshot/scikit-image-master/skimage/filters/thresholding.py
+	threshold_local
+	+ complete
+	- 2 mismatch (datatypes not explicitly stated)
+18 ====================
+../MSR-Snapshot/scikit-image-master/skimage/morphology/grey.py
+	opening
+	+ complete
+	- 0 mismatch
+19 ====================
+../MSR-Snapshot/scikit-image-master/skimage/restoration/inpaint.py
+	inpaint_biharmonic
+	+ complete
+	- 0 mismatch
+20 ====================
+../MSR-Snapshot/scikit-image-master/skimage/future/graph/rag.py
+	rag_mean_color
+	+ complete
+	- 0 mismatch
+21 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/colorconv.py
+	xyz2lab
+	+ complete
+	- 2 mismatch (datatype not defined)
+22 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/colorconv.py
+	rgb2lab
+	+ complete
+	- 2 mismatch (datatype not defined)
+23 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/delta_e.py
+	deltaE_ciede2000
+	+ complete
+	- 0 mismatch
+24 ====================
+../MSR-Snapshot/scikit-image-master/skimage/restoration/deconvolution.py
+	wiener
+	+ complete
+	- 0 mismatch
+25 ====================
+../MSR-Snapshot/scikit-image-master/skimage/util/dtype.py
+	img_as_float64
+	+ complete
+	- 0 mismatch
+26 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/colorconv.py
+	lab2rgb
+	+ complete
+	- 2 mismatch (datatype not defined)
+27 ====================
+../MSR-Snapshot/scikit-image-master/skimage/feature/blob.py
+	blob_doh
+	+ complete
+	- 0 mismatch
+28 ====================
+../MSR-Snapshot/scikit-image-master/skimage/filters/edges.py
+	sobel_h
+	+ complete
+	- 0 mismatch
+29 ====================
+../MSR-Snapshot/scikit-image-master/doc/ext/plot2rst.py
+	process_blocks
+	+ complete
+	- 0 mismatch
+30 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/colorconv.py
+	xyz2luv
+	+ complete
+	- 2 mismatch (datatype not defined)
+31 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/colorconv.py
+	luv2xyz
+	+ complete
+	- 2 mismatch (datatype not defined)
+32 ====================
+../MSR-Snapshot/scikit-image-master/skimage/feature/corner.py
+	corner_harris
+	+ complete
+	- 1 mismatch (datatype not defined)
+33 ====================
+../MSR-Snapshot/scikit-image-master/skimage/feature/corner.py
+	structure_tensor
+	+ complete
+	- 1 mismatch (datatype not defined)
+34 ====================
+../MSR-Snapshot/scikit-image-master/skimage/filters/rank/generic.py
+	noise_filter
+	+ complete
+	- 0 mismatch
+35 ====================
+../MSR-Snapshot/scikit-image-master/skimage/feature/corner.py
+	hessian_matrix
+	+ complete
+	- 1 mismatch (datatype not defined)
+36 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/colorconv.py
+	rgbcie2rgb
+	+ complete
+	- 0 mismatch
+37 ====================
+../MSR-Snapshot/scikit-image-master/skimage/feature/corner.py
+	corner_kitchen_rosenfeld
+	+ complete
+	- 1 mismatch (datatype not defined)
+38 ====================
+../MSR-Snapshot/scikit-image-master/skimage/feature/corner.py
+	shape_index
+	+ complete
+	- 1 mismatch (datatype not defined)
+39 ====================
+../MSR-Snapshot/scikit-image-master/skimage/color/colorconv.py
+	convert_colorspace
+	+ complete
+	- 0 mismatch
+40 ====================

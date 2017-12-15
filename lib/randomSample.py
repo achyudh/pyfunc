@@ -1,6 +1,8 @@
 from fileRetriever import Retriever
 import sys 
 import random
+import ast
+import numpy as np
 
 
 class RandomSample():
@@ -19,7 +21,17 @@ class RandomSample():
         """
         self.retriever = retriever
 
-    def retrieve_random_sample(self, root_folder, output_file_name = None):
+    def fns_with_docstring(self, file_contents):
+        fn_list = list()
+        curr_module = ast.parse(file_contents)
+        func_def_nodes = [node for node in curr_module.body if isinstance(node, ast.FunctionDef)]
+
+        for node in func_def_nodes:
+            if node.name[0] != '_' and ast.get_docstring(node) is not None and ("Parameters" in ast.get_docstring(node) or "Returns" in ast.get_docstring(node)):
+                fn_list.append(node.name)
+        return fn_list
+
+    def retrieve_random_sample(self, root_folder, output_file_name, n_samples):
         """
         Retrieves random k sample methods from all the methods from the root folder and stores them in output file.
         :param root_folder: string
@@ -31,54 +43,43 @@ class RandomSample():
         :return: None
         """
         paths = self.retriever.list_python_files(root_folder)
-        files_and_methods = {}
         all_methods = []
+        methods_per_file = {}
         #random sample
-        k = 86
         #Get all variables from all pyhton files
         for id in range(len(paths)):
             path = paths[id]
             #if decoding of file fails, because of strange char
             file = open(path, "r", encoding="utf8")
             #file = open(path, "r")
+            file_contents = file.read()
             # Finds all methods and adds them to a list
-            for line in file:
-                if(line.startswith("def ")):
-                    all_methods.append(line)
+            relevant_methods = self.fns_with_docstring(file_contents)
+            all_methods.extend([(path, x) for x in relevant_methods])
         #Select k random variables
-        print(len(all_methods))
-        random_sample = random.sample(all_methods, k)
-        for id in range(len(paths)):
-            file_methods = []
-            path = paths[id]
-            #if decoding of file fails, because of strange char
-            file = open(path, "r", encoding="utf8")
-            #file = open(path, "r")
-            # Finds all methods and adds them to a list
-            for line in file:
-                if(line.startswith("def ")):
-                    file_methods.append(line)
-            #Check if any method of this file is in the random selection, if so add them to the list
-            random_methods = list(set(random_sample) & set(file_methods))
-            if len(random_methods) > 0:
-                files_and_methods[path] = random_methods
-        
+        sample_value = np.min([n_samples, len(all_methods)])
+        random_sample = random.sample(all_methods, sample_value)        
         #Write result to specified file
+        print(output_file_name)
+        count = 1
         if output_file_name:
             with open(output_file_name, "w") as output_file:
-                for key in files_and_methods.keys():
-                    output_file.write(key + "\n")
-                    for methods in files_and_methods[key]:
-                        output_file.write(methods + "\n")
-                    output_file.write("=" * 20 + "\n")
-
+                for (x, y) in random_sample:
+                    output_file.write(x + "\n\t" + y + "\n" + str(count) + " " + "="*20 + "\n")
+                    count += 1
 
 if __name__ == "__main__":
     retriever = Retriever()
     random_sample = RandomSample(retriever)
+    random.seed(0)
+    folder_paths = {"../MSR-Snapshot/django-master/": ("../random sampling/django.txt", 24),
+                    "../MSR-Snapshot/matplotlib-master/": ("../random sampling/matplotlib.txt", 45),
+                    "../MSR-Snapshot/networkx-master": ("../random sampling/networkx.txt", 40),
+                    "../MSR-Snapshot/neupy-master": ("../random sampling/neupy.txt", 4),
+                    "../MSR-Snapshot/scikit-image-master": ("../random sampling/scikit-image", 40),
+                    "../MSR-Snapshot/scikit-learn-master/sklearn": ("../random sampling/scikit-learn", 86)}
 
 
-    if(len(sys.argv) < 2):
-        raise Exception("Usage: python randomSample.py <path\\to\\root\\directory>") 
-    root_folder = sys.argv[1]
-    random_sample.retrieve_random_sample(root_folder, "./random sampling/scikit-learn.txt")
+    for key in folder_paths.keys():
+        random_sample.retrieve_random_sample(key, folder_paths[key][0], folder_paths[key][1])
+    

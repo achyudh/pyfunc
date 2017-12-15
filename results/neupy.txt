@@ -1,0 +1,14 @@
+file: MSR-Snapshot\neupy-master\neupy\storage.py_
+
+         type: parameter
+                line: load_dict
+                error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+
+
+
+number of mismatches: 1
+
+ total   complete        partial         missing
+
+ 148    114     21      13

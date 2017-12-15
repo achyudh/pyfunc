@@ -1,0 +1,129 @@
+
+file: MSR-Snapshot\networkx-master\networkx\convert_matrix.py_
+
+         type: parameter
+                line: to_pandas_adjacency
+                error: Incompatible types in assignment (expression has type Callable[[Iterable[_T], _T], _T], variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\convert_matrix.py_
+
+         type: parameter
+                line: to_numpy_matrix
+                error: Incompatible types in assignment (expression has type Callable[[Iterable[_T], _T], _T], variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\convert_matrix.py_
+
+         type: parameter
+                line: to_numpy_array
+                error: Incompatible types in assignment (expression has type Callable[[Iterable[_T], _T], _T], variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\algorithms\cycles.py_
+
+         type: parameter
+                line: find_cycle
+                error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\algorithms\link_analysis\pagerank_alg.py_
+
+         type: parameter
+                line: pagerank
+                error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\algorithms\link_analysis\pagerank_alg.py_
+
+         type: parameter
+                line: google_matrix
+                error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\algorithms\link_analysis\pagerank_alg.py_
+
+         type: parameter
+                line: pagerank_numpy
+                error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\algorithms\link_analysis\pagerank_alg.py_
+
+         type: parameter
+                line: pagerank_scipy
+                error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\algorithms\operators\all.py_
+
+         type: parameter
+                line: union_all
+                error: Incompatible types in assignment (expression has type "Tuple[None]", variable has type "bool")
+
+file: MSR-Snapshot\networkx-master\networkx\algorithms\operators\binary.py_
+
+         type: parameter
+                line: union
+                error: Incompatible types in assignment (expression has type "Tuple[None, None]", variable has type "bool")
+
+file: MSR-Snapshot\networkx-master\networkx\algorithms\traversal\edgedfs.py_
+
+         type: parameter
+                line: edge_dfs
+                error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\drawing\layout.py_
+
+         type: parameter
+                line: circular_layout
+                error: Incompatible types in assignment (expression has type "int", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\drawing\layout.py_
+
+         type: parameter
+                line: shell_layout
+                error: Incompatible types in assignment (expression has type "int", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\drawing\layout.py_
+
+         type: parameter
+                line: fruchterman_reingold_layout
+                error: Incompatible types in assignment (expression has type "int", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\drawing\layout.py_
+
+         type: parameter
+                line: kamada_kawai_layout
+                error: Incompatible types in assignment (expression has type "int", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\drawing\layout.py_
+
+         type: parameter
+                line: spectral_layout
+                error: Incompatible types in assignment (expression has type "int", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\drawing\layout.py_
+
+         type: parameter
+                line: rescale_layout
+                error: Incompatible types in assignment (expression has type "int", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\generators\ego.py_
+
+         type: parameter
+                line: ego_graph
+                error: Incompatible types in assignment (expression has type "int", variable has type None)
+
+file: MSR-Snapshot\networkx-master\networkx\generators\nonisomorphic_trees.py_
+
+         type: parameter
+                line: nonisomorphic_trees
+                error: Incompatible types in assignment (expression has type "str", variable has type List[Any])
+
+file: MSR-Snapshot\networkx-master\networkx\linalg\laplacianmatrix.py_
+
+         type: parameter
+                line: directed_laplacian_matrix
+                error: Incompatible types in assignment (expression has type "float", variable has type None)
+
+
+
+
+number of mismatches: 10
+
+ total   complete        partial         missing
+
+ 810    501     153     156

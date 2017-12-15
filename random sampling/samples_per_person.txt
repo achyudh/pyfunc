@@ -1,0 +1,29 @@
+django: 961- 24 samples
+D - 1-8
+N - 9-16
+A - 17-24
+
+matplotlib: 1758 - 45 samples
+D - 1-15
+N - 16-30
+A - 31-45
+
+networkx: 1563 - 40 samples
+D - 1-14*
+N - 15-27
+A - 28-40
+
+neupy: 168 - 4 samples
+D - 1
+N - 2-3*
+A - 4
+
+scikit-image: 1563- 40 samples
+D - 1-13
+N - 14-26
+A - 27-40*
+
+scikit-learn: 3391 - 86 samples
+D - 1-28
+N - 29-57
+A - 58-86

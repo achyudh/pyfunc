@@ -37,25 +37,75 @@ class Extractor:
                         total_arg_ctr = 0
                         param_types_out = list()
                         max_line_num = node.lineno
-                        for argument in node.args.args:
-                            if param_types is not None and argument.arg in param_types:
-                                param_types_out.append((argument.arg, param_types[argument.arg]))
-                            elif param_types_alt is not None and argument.arg in param_types_alt:
-                                param_types_out.append((argument.arg, param_types_alt[argument.arg]))
-                                almost_missed += 1
+
+
+                        # Achyudh's old code
+                        # for argument in node.args.args:
+                        #     if param_types is not None and argument.arg in param_types:
+                        #         param_types_out.append((argument.arg, param_types[argument.arg]))
+                        #     elif param_types_alt is not None and argument.arg in param_types_alt:
+                        #         param_types_out.append((argument.arg, param_types_alt[argument.arg]))
+                        #         almost_missed += 1
+                        #     else:
+                        #         missed_arg_ctr += 1
+                        #     total_arg_ctr += 1
+                        #     max_line_num = max(max_line_num, argument.lineno)
+
+
+                        # Get keys from both alt and non-alt
+                        params_non_alt = param_types.keys() if param_types else []
+                        params_alt = param_types_alt.keys() if param_types_alt else []
+                        params = list(set(params_non_alt) | set(params_alt))
+
+                        # Get all types of keys found in either alt or non-alt
+                        # If present in both then give priority to non-alt
+                        params_and_types_comment = {}
+                        for param in params:
+                            if (param in param_types):
+                                params_and_types_comment[param] = param_types[param]
+                                print(param)
                             else:
-                                missed_arg_ctr += 1
-                            total_arg_ctr += 1
-                            max_line_num = max(max_line_num, argument.lineno)
+                                params_and_types_comment[param] = param_types_alt[param]
+                                print(param, "ALT")                        
+                        # Get arguments from function definition
+                        args = [argument.arg for argument in node.args.args]
+
+                        # For each argument in def find type from comment or add missing type
+                        for arg in args:
+                            if arg in params_and_types_comment:
+                                param_types_out.append((arg, params_and_types_comment[arg]))
+                            else:
+                                param_types_out.append((arg, "missing"))
+
+                        # Find all params that are in the comment but not in def and label as extra
+                        #for param in params:
+                        #    if (param not in args):
+                        #        param_types_out.append((param, "extra"))
+                        param_types_out = [x for x in param_types_out if x[0] != 'self']
 
                         return_types_alt = list() if return_types_alt is not None else return_types_alt
+
+                        # True for every parameter that is extra or missing
+                        missing_or_extra = [x[1] == "missing" or x[1] == "extra" for x in param_types_out]
+
+                        # Assign function completess tag based on missing_or_extra
+                        if not any(missing_or_extra):
+                            tag = "complete"
+                        elif not all(missing_or_extra):
+                            tag = "partial"
+                        else:
+                            tag = "incomplete"
+
                         declarations.append(
                             {"name": node.name, "line": Extractor.func_defn_endline(py_file, max_line_num),
                              "params": param_types_out,
                              "returns": return_types_alt if return_types is None else return_types,
-                             "count": {"total_params": total_arg_ctr, "missed_params": missed_arg_ctr}})
+                             "count": {"total_params": total_arg_ctr, "missed_params": missed_arg_ctr},
+                             "tag": tag
+                             })
                 return declarations
-            except:
+            except Exception as e:
+                print(e)
                 print("READ ERROR:", py_file)
                 return list()
 

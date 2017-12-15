@@ -1,0 +1,458 @@
+networkx:
+NETWORKX
+file: ../MSR-Snapshot/networkx-master/networkx/algorithms/cycles.py_
+
+	 type: parameter
+		line: find_cycle
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/networkx-master/networkx/algorithms/operators/binary.py_
+
+	 type: parameter
+		line: union
+		error: Incompatible types in assignment (expression has type "Tuple[None, None]", variable has type "bool")
+			Comments says bool, default is (None, None), tool says bool, whereas code picked up Tuple[None, None]. 
+
+file: ../MSR-Snapshot/networkx-master/networkx/algorithms/traversal/edgedfs.py_
+
+	 type: parameter
+		line: edge_dfs
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/networkx-master/networkx/algorithms/operators/all.py_
+
+	 type: parameter
+		line: union_all
+		error: Incompatible types in assignment (expression has type "Tuple[None]", variable has type "bool")
+			Comments says bool, default is (None, None), tool says bool, whereas code picked up Tuple[None].
+
+file: ../MSR-Snapshot/networkx-master/networkx/convert_matrix.py_
+
+	 type: parameter
+		line: to_pandas_adjacency
+		error: Incompatible types in assignment (expression has type Callable[[Iterable[_T], _T], _T], variable has type None)
+			Comments doens't state type, but options.
+
+file: ../MSR-Snapshot/networkx-master/networkx/convert_matrix.py_
+
+	 type: parameter
+		line: to_numpy_matrix
+		error: Incompatible types in assignment (expression has type Callable[[Iterable[_T], _T], _T], variable has type None)
+			Comments doens't state type, but options.
+
+file: ../MSR-Snapshot/networkx-master/networkx/convert_matrix.py_
+
+	 type: parameter
+		line: to_numpy_array
+		error: Incompatible types in assignment (expression has type Callable[[Iterable[_T], _T], _T], variable has type None)
+			Comments doens't state type, but options.
+
+file: ../MSR-Snapshot/networkx-master/networkx/linalg/laplacianmatrix.py_
+
+	 type: parameter
+		line: directed_laplacian_matrix
+		error: Incompatible types in assignment (expression has type "float", variable has type None)
+			Comments doesn't have type float, but describes variable as real.
+
+file: ../MSR-Snapshot/networkx-master/networkx/generators/ego.py_
+
+	 type: parameter
+		line: ego_graph
+		error: Incompatible types in assignment (expression has type "int", variable has type None)
+			Comments doesn't have type int, but describes variable as number.
+
+file: ../MSR-Snapshot/networkx-master/networkx/generators/nonisomorphic_trees.py_
+
+	 type: parameter
+		line: nonisomorphic_trees
+		error: Incompatible types in assignment (expression has type "str", variable has type List[Any])
+			Comments says graph, default is "graph" (str), tool says List[Any] (= probably graph object), whereas code picked up str.
+
+file: ../MSR-Snapshot/networkx-master/networkx/drawing/layout.py_
+
+	 type: parameter
+		line: circular_layout
+		error: Incompatible types in assignment (expression has type "int", variable has type None)
+			Comments doesn't have type int, but describes variable as number.
+
+file: ../MSR-Snapshot/networkx-master/networkx/drawing/layout.py_
+
+	 type: parameter
+		line: shell_layout
+		error: Incompatible types in assignment (expression has type "int", variable has type None)
+			Comments doesn't have type int, but describes variable as number.
+
+file: ../MSR-Snapshot/networkx-master/networkx/drawing/layout.py_
+
+	 type: parameter
+		line: fruchterman_reingold_layout
+		error: Incompatible types in assignment (expression has type "int", variable has type None)
+			Comments doesn't have type int, but describes variable as number.
+
+file: ../MSR-Snapshot/networkx-master/networkx/drawing/layout.py_
+
+	 type: parameter
+		line: kamada_kawai_layout
+		error: Incompatible types in assignment (expression has type "int", variable has type None)
+			Comments doesn't have type int, but describes variable as number.
+
+file: ../MSR-Snapshot/networkx-master/networkx/drawing/layout.py_
+
+	 type: parameter
+		line: spectral_layout
+		error: Incompatible types in assignment (expression has type "int", variable has type None)
+			Comments doesn't have type int, but describes variable as number.
+
+file: ../MSR-Snapshot/networkx-master/networkx/drawing/layout.py_
+
+	 type: parameter
+		line: rescale_layout
+		error: Incompatible types in assignment (expression has type "int", variable has type None)
+			Comments doesn't have type int, but describes variable as number.
+
+file: ../MSR-Snapshot/networkx-master/networkx/algorithms/link_analysis/pagerank_alg.py_
+
+	 type: parameter
+		line: pagerank
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+			Comments doesn't have type str, but describes variable as key.
+
+file: ../MSR-Snapshot/networkx-master/networkx/algorithms/link_analysis/pagerank_alg.py_
+
+	 type: parameter
+		line: google_matrix
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+			Comments doesn't have type str, but describes variable as key.
+
+file: ../MSR-Snapshot/networkx-master/networkx/algorithms/link_analysis/pagerank_alg.py_
+
+	 type: parameter
+		line: pagerank_numpy
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+			Comments doesn't have type str, but describes variable as key.
+
+file: ../MSR-Snapshot/networkx-master/networkx/algorithms/link_analysis/pagerank_alg.py_
+
+	 type: parameter
+		line: pagerank_scipy
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+			Comments doesn't have type str, but describes variable as key.
+
+scikit-learn:
+SKLEARN
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/twenty_newsgroups.py_
+
+	 type: parameter
+		line: fetch_20newsgroups
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/twenty_newsgroups.py_
+
+	 type: parameter
+		line: fetch_20newsgroups
+		error: Incompatible types in assignment (expression has type "bool", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/twenty_newsgroups.py_
+
+	 type: parameter
+		line: fetch_20newsgroups_vectorized
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/twenty_newsgroups.py_
+
+	 type: parameter
+		line: fetch_20newsgroups_vectorized
+		error: Incompatible types in assignment (expression has type "bool", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/cluster/dbscan_.py_
+
+	 type: parameter
+		line: dbscan
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/linear_model/ridge.py_
+
+	 type: parameter
+		line: ridge_regression
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/externals/joblib/hashing.py_
+
+	 type: parameter
+		line: hash
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/feature_selection/mutual_info_.py_
+
+	 type: parameter
+		line: mutual_info_regression
+		error: Incompatible types in assignment (expression has type "str", variable has type "bool")
+			Comments states variable is either string, bool or array, so tool looks for str, whereas code picked up bool. 
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/feature_selection/mutual_info_.py_
+
+	 type: parameter
+		line: mutual_info_classif
+		error: Incompatible types in assignment (expression has type "str", variable has type "bool")
+			Comments states variable is either string, bool or array, so tool looks for str, whereas code picked up bool. 
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/california_housing.py_
+
+	 type: parameter
+		line: fetch_california_housing
+		error: Incompatible types in assignment (expression has type "bool", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/svm/bounds.py_
+
+	 type: parameter
+		line: l1_min_c
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/lfw.py_
+
+	 type: parameter
+		line: fetch_lfw_people
+		error: Incompatible types in assignment (expression has type "Tuple[slice, slice]", variable has type None)
+			Comments expect optional, tool says none, whereas code picked up Tuple[slice, slice].
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/lfw.py_
+
+	 type: parameter
+		line: fetch_lfw_people
+		error: Incompatible types in assignment (expression has type "bool", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/lfw.py_
+
+	 type: parameter
+		line: fetch_lfw_pairs
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/lfw.py_
+
+	 type: parameter
+		line: fetch_lfw_pairs
+		error: Incompatible types in assignment (expression has type "Tuple[slice, slice]", variable has type None)
+			Comments expect optional, tool says none, whereas code picked up Tuple[slice, slice].
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/lfw.py_
+
+	 type: parameter
+		line: fetch_lfw_pairs
+		error: Incompatible types in assignment (expression has type "bool", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/metrics/classification.py_
+
+	 type: parameter
+		line: f1_score
+		error: Incompatible types in assignment (expression has type "int", variable has type "str")
+			Comments expect str or int, default is 1 (int), tool says str, whereas code picked up int
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/metrics/classification.py_
+
+	 type: parameter
+		line: fbeta_score
+		error: Incompatible types in assignment (expression has type "int", variable has type "str")
+			Comments expect str or int, default is 1 (int), tool says str, whereas code picked up int
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/metrics/classification.py_
+
+	 type: parameter
+		line: precision_recall_fscore_support
+		error: Incompatible types in assignment (expression has type "int", variable has type "str")
+			Comments expect str or int, default is 1 (int), tool says str, whereas code picked up int
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/metrics/classification.py_
+
+	 type: parameter
+		line: precision_score
+		error: Incompatible types in assignment (expression has type "int", variable has type "str")
+			Comments expect str or int, default is 1 (int), tool says str, whereas code picked up int
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/metrics/classification.py_
+
+	 type: parameter
+		line: recall_score
+		error: Incompatible types in assignment (expression has type "int", variable has type "str")
+			Comments expect str or int, default is 1 (int), tool says str, whereas code picked up int
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/species_distributions.py_
+
+	 type: parameter
+		line: fetch_species_distributions
+		error: Incompatible types in assignment (expression has type "bool", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/decomposition/fastica_.py_
+
+	 type: parameter
+		line: fastica
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/linear_model/omp.py_
+
+	 type: parameter
+		line: orthogonal_mp
+		error: Incompatible types in assignment (expression has type "bool", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/manifold/locally_linear.py_
+
+	 type: parameter
+		line: null_space
+		error: Incompatible types in assignment (expression has type "int", variable has type None)
+			Comment does not state any type, just explains with nl.
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/manifold/locally_linear.py_
+
+	 type: parameter
+		line: locally_linear_embedding
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/externals/joblib/format_stack.py_
+
+	 type: parameter
+		line: format_exc
+		error: Incompatible types in assignment (expression has type "int", variable has type None)
+			Comments use nl.
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/linear_model/sag.py_
+
+	 type: parameter
+		line: sag_solver
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+			Comments use nl to state the options, type not stated.
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/learning_curve.py_
+
+	 type: parameter
+		line: learning_curve
+		error: Incompatible types in assignment (expression has type "str", variable has type "int")
+			Comments expect int or str, default is "all" (str), tool says int, whereas code picked up str.
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/learning_curve.py_
+
+	 type: parameter
+		line: validation_curve
+		error: Incompatible types in assignment (expression has type "str", variable has type "int")
+			Comments expect int or str, default is "all" (str), tool says int, whereas code picked up str.
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/olivetti_faces.py_
+
+	 type: parameter
+		line: fetch_olivetti_faces
+		error: Incompatible types in assignment (expression has type "bool", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/mldata.py_
+
+	 type: parameter
+		line: fetch_mldata
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/mldata.py_
+
+	 type: parameter
+		line: fetch_mldata
+		error: Incompatible types in assignment (expression has type "bool", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/covariance/graph_lasso_.py_
+
+	 type: parameter
+		line: graph_lasso
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/covariance/graph_lasso_.py_
+
+	 type: parameter
+		line: graph_lasso_path
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/random_projection.py_
+
+	 type: parameter
+		line: sparse_random_matrix
+		error: Incompatible types in assignment (expression has type "str", variable has type "float")
+			Comments expect float or str, default is "auto" (str), tool says float, whereas code picked up str.
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/linear_model/least_angle.py_
+
+	 type: parameter
+		line: lars_path
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/decomposition/nmf.py_
+
+	 type: parameter
+		line: non_negative_factorization
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/decomposition/nmf.py_
+
+	 type: parameter
+		line: non_negative_factorization
+		error: Incompatible types in assignment (expression has type "str", variable has type "float")
+			Comments expect float or str, default is "auto" (str), tool says float, whereas code picked up str.
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/samples_generator.py_
+
+	 type: parameter
+		line: make_multilabel_classification
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/datasets/samples_generator.py_
+
+	 type: parameter
+		line: make_blobs
+		error: Incompatible types in assignment (expression has type "Tuple[float, float]", variable has type "float")
+			Comments says float or sequance of floats, default is sequence of floats, tool says float, whereas code picked up Tuple[float, float].
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/neighbors/graph.py_
+
+	 type: parameter
+		line: kneighbors_graph
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/neighbors/graph.py_
+
+	 type: parameter
+		line: radius_neighbors_graph
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/preprocessing/data.py_
+
+	 type: parameter
+		line: normalize
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/preprocessing/data.py_
+
+	 type: parameter
+		line: normalize
+		error: Incompatible types in assignment (expression has type "int", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/cluster/spectral.py_
+
+	 type: parameter
+		line: spectral_clustering
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/linear_model/logistic.py_
+
+	 type: parameter
+		line: logistic_regression_path
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/decomposition/dict_learning.py_
+
+	 type: parameter
+		line: sparse_encode
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/decomposition/dict_learning.py_
+
+	 type: parameter
+		line: dict_learning
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
+
+file: ../MSR-Snapshot/scikit-learn-master/sklearn/decomposition/dict_learning.py_
+
+	 type: parameter
+		line: dict_learning_online
+		error: Incompatible types in assignment (expression has type "str", variable has type None)
