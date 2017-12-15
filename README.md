@@ -1,5 +1,6 @@
 # PyFunc-Signature-Parser
-
+Walks Python AST and parses doctrings to provide hints to MyPy for checking inconsistencies between docstrings and code.
+ 
 ## Modules
 ### lib.fileSelector
 Adjust the parameters in the __main__ call to traverse a specified folder and retrieve all the file names where variable and/or return types are specified in the docstring as well as those docstrings. Additionally, the parameters allow you to either print the output to the console or write them to a file.
